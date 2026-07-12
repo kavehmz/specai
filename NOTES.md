@@ -87,7 +87,7 @@ panel review before heavy use; the L1 eval run doubles as its live-fire test. Op
 **The run** (same day as founding — the skill's first full engagement): dial scored 2 → tier S,
 matching the calibration anchor exactly. Six isolated component authors, four blind verification
 rounds (majors 4 → 1 → 1 → 0; zero blockers ever; every binding worked example independently
-recomputed at least twice), operator-sealed, countersigned as `eb54c20` in the
+recomputed at least twice), operator-sealed and countersigned in the
 specai-feedler repo (github.com/kavehmz/specai-feedler) (4,113 spec lines from a 27-line ideation; the hand-built
 reference is ~4.1K). Full audit trail in that repo's `.specai-run/`.
 
