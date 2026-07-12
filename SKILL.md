@@ -1,6 +1,6 @@
 ---
 name: specai
-description: Turn a human product ideation into a complete, self-operable spec repository (vision, architecture, contracts, component specs, operating manual) of the feedler/AI-Cities class — then hand develop/design/verify to the emitted repo's own start.md. Use for "new product from an idea", regenerating or evaluating spec trees, or improving the specai process itself.
+description: Turn a human product ideation into a complete, self-operable spec repository (vision, architecture, contracts, component specs, operating manual) — then hand develop/design/verify to the emitted repo's own start.md. Use for "new product from an idea", regenerating or evaluating spec trees, or improving the specai process itself.
 ---
 
 # specai — the ideation→spec factory

@@ -13,14 +13,26 @@ was kept, changed, and dropped is recorded in `NOTES.md`.
 
 ## Invoke
 
-As a skill (Claude Code: place/link this directory under a skills path), or directly in any
-harness:
+specai is an [agent skill](https://code.claude.com/docs/en/skills): `SKILL.md` carries the
+`name`/`description` frontmatter a harness discovers it by. Install it on a skills path — for
+Claude Code:
 
 ```
-Read SKILL.md. new product feedler2 — ideation at ./my-idea.md, target ../feedler2/
-Read SKILL.md. evaluate feedler
-Read SKILL.md. improve specai: <request>
+git clone https://github.com/kavehmz/specai ~/.claude/skills/specai
 ```
+
+then invoke it by name from any working directory:
+
+```
+/specai new product feedler2 — ideation at ./my-idea.md, target ../feedler2/
+/specai evaluate feedler
+/specai improve specai: <request>
+```
+
+or just describe the task ("turn ./my-idea.md into a spec repo") — the agent matches on the
+skill's description and loads it itself. On a harness with no skill system, the fallback is the
+file: start a session in this directory and open with "Read SKILL.md." followed by the same
+commands.
 
 For a product that already has a sealed repo, don't come here — use that repo's own
 `specs/start.md`.
