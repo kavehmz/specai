@@ -91,9 +91,11 @@ edit's claimed size:
    rule 2 also matches, the stricter gate binds.**
 2. Changes to the **self-governing surfaces** — `verification_core.md`, this document's §4–§5,
    `SKILL.md` §4's contamination/degraded-floor clauses, `reference/exemplars.md` §3 (the eval
-   hygiene rules — the highest-leverage self-serving edit surface), or the **seal-operating
-   text** (`phases/verification.md`'s verifier package + fenced checks, `phases/delta.md`
-   step 6 — functionally equivalent to the rules they execute) — take a full fresh-context
+   hygiene rules — the highest-leverage self-serving edit surface), `SKILL.md` §5's eval
+   close-out and §2's eval routing row (sibling carriers of the same hygiene), or the
+   **seal-operating text** (`phases/verification.md`'s verifier package + fenced checks,
+   `phases/delta.md` step 6 — functionally equivalent to the rules they execute) — take a full
+   fresh-context
    **panel** (≥3 distinct lenses) before landing. **No typo/clarity exemption on these
    surfaces**: any diff takes at least the focused pass.
 3. Phase-file changes are focused; any other binding text in this tree (`README.md` included)

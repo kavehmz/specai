@@ -96,8 +96,9 @@ primary flows, reset/retirement) · **Engineering standards** (inline at tier S 
 explicit requirements-coverage matrix at tier M/L · **(dial)** a **Money & compliance** section
 whenever regulatory/money scores 2 (`dial.md` §1): the money flows and custody/settlement rules,
 each REG-line of the regulatory register (`phases/definition.md`) mapped to its enforcing
-component or principle, and the audit surfaces — money-path changes gate at top tier
-(`change_rule.md` §4).
+component or principle, and the audit surfaces — closing with the emitted-verbatim definition
+(the template carries it): a **money-path** change is any edit to a clause cited by this
+section, gated at top tier (`change_rule.md` §4).
 Declares the requirement-language convention (MUST/SHOULD per RFC 2119) once, for the whole suite.
 
 ### 4.3 `start.md` — the operating manual
@@ -123,8 +124,9 @@ flagged with proposed improvements to this manual** — the self-improvement loo
 ### 4.4 `standards/` — contract standards (the hardened waist)
 At least one **wire/interface contract** whenever ≥2 sides must agree (frontend↔backend counts):
 object shapes → conventions (error shape, status codes, auth posture) → every endpoint/message
-verbatim. Header carries **Version**; any change to a shape, endpoint, parameter, or status code
-requires a **version bump + migration note in the document itself**. Contracts are born
+verbatim. Header carries **Version** and the versioning law (`templates/contract_standard.md`
+owns its enumeration): a covered change requires a **version bump + migration note in the
+document itself**. Contracts are born
 consumer-driven (`phases/contracts.md`) and keep a consumers appendix (who needs which endpoint,
 why — mandatory at M/L, recommended at S). Plus `engineering_standard.md` (§4.7) when not
 inlined, and process standards per dial (§5): `verification_standard.md`, `develop_loop.md`.
@@ -229,7 +231,7 @@ Tier per `standards/dial.md`. Higher tiers add; they never remove.
 | Verification | fresh-eyes discipline inline in `start.md` §4 | separate standard, focused passes per `change_rule.md` §4 | full standard: QA-officer pattern, lens panel, taxonomy, verdict records |
 | `develop_loop.md` (Builder/Gate auto-convergence) | optional | recommended | recommended |
 | Design | `design/design_spec.md` if UI | same | + design-studio track when experience-led (`studio.md` — §4.11 owns the condition) |
-| Coverage | component table + phase-6 traceability check | + explicit coverage matrix in architecture | + matrices and comms matrix, maintained |
+| Coverage | component table + phase-6 traceability check | + explicit coverage matrix + comms matrix in architecture | + both matrices, maintained |
 | Stable requirement IDs | no (named sections suffice) | optional | yes, if the tree is large enough that citations strain |
 | Divergence ledger | one root `DRIFT.md`, per-component headings | same | may split per component when the one file strains (length, edit contention, ownership): split files at `drift/<component>.md`, the root file becomes the index (deleted when the last split file goes); per-file absence asserts that component's conformance |
 | Agent operations | no | no | agent standards when the product is AI-operated |
@@ -257,7 +259,7 @@ Phase-6 verification checks these mechanically before any judgment lens runs:
    seeded with dial justifications and founding decisions, and any recorded seal line carries its
    verification mode (§4.9). At a **first** seal, no `DRIFT.md` (nothing has been built yet —
    §4.10); at a delta re-seal a present `DRIFT.md` conforms to §4.10 (or, at tier L, to §5's split
-   form). (`DRIFT.md` is outside checks 1–2's required set, and references to it are conditional —
-   they resolve vacuously while the file is legitimately absent.)
+   form). (`DRIFT.md` is conditional per check 1; references to it
+   resolve vacuously while the file is legitimately absent.)
 8. No template scaffolding survives: no `<placeholder>` angle-bracket text and no authoring
    blockquotes anywhere in `specs/`, outside fenced examples.

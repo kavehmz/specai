@@ -417,6 +417,23 @@ letter-level. What this engagement leaves behind besides the hardened tree: verb
 reports as standing practice, the taxonomy seed, the exempted-edits ledger, tamper-evident gate
 copies, and a process that caught and recorded its own false claims twice.
 
+## 2026-07-17 — Post-seal audit (operator-invited): 0 blockers, ~9 majors found and fixed; IOU recorded
+
+After the seal (`d86eec3`), the operator invited one more four-lens audit — information, not a
+gate. **FAIL ×4 with zero blockers**; ~9 deduped majors, half final-wave residue, half
+multi-round survivors. The two catches that justified the round: the **money-path definition
+never reached the emitted world** (emitted repos gated on a term only a factory file defined —
+now emitted verbatim by the architecture template §7b), and **gate-copy tamper evidence failed
+open on absence** (check 1 diffed only what existed — absence now blocks like an unpaid IOU, and
+gate copies join the relocation set so the diff backstop durably sees them). Everything else
+held, including full ledger↔tree agreement on this engagement's closing claims. Full record:
+`verdicts/2026-07-17-postseal-audit.md`; raw reports `verdicts/2026-07-17-audit-lens*.md`.
+
+All findings fixed in this change set. **IOU (§5.4):** the fixes touch rule-1/rule-2 surfaces ·
+owed gate = focused pass + panel per §5, verdicts returned and closed · anchor = before the next
+seal or eval (the feedler build-proof or L4, whichever first). Operator countersign of this
+audit + fixes = the commit.
+
 ## Exempted edits
 
 *(standing heading per `change_rule.md` §5 rule 3 — one line per typo/clarity-exempted edit;

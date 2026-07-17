@@ -39,7 +39,7 @@ For a product that already has a sealed repo, don't come here — use that repo'
 ## Layout
 
 ```
-SKILL.md          the dispatcher: doctrine, routing, the run, harness bindings
+SKILL.md          the front door: doctrine, routing, the run, harness bindings
 standards/        grammar (what an emitted repo is) · dial · style · change_rule · verification_core
 phases/           definition · architecture · contracts · component_specs · emission · verification
                   · delta (product-reshaping change on a sealed repo)

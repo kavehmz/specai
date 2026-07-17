@@ -6,7 +6,8 @@
 > work from this template and their declared inputs alone.
 > The design spec uses this same shape with the intent-vs-binding split: **appearance (the
 > current visual identity) is replaceable intent; layout shape, theming behavior, interaction
-> patterns, and the accessibility floor are binding behavior** (grammar §4.6 is the provenance).
+> patterns, the accessibility floor, and motion intent are binding behavior** (grammar §4.6 is
+> the provenance).
 
 # <Product> — <Component> — <one-line scope: the surfaces/behaviors this spec owns>
 

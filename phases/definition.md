@@ -63,8 +63,9 @@ context — the idea — so they are produced together, coherently, by one autho
 7. **Self-review** (quality cell): re-enter as a skeptic — does every inventory line trace to
    ideation or checkpoint? Would a stranger reading only `vision.md` know what to refuse to build?
    Is anything in vision.md HOW? Fix. Per the spot-verify schedule (`dial.md` §2), also dispatch
-   the fresh spot-verify (lenses: ideation coverage + altitude/style, scoped to vision/inventory)
-   before the operator gate.
+   the fresh spot-verify (lenses: ideation coverage + altitude/style, scoped to vision/inventory;
+   the package is this phase's input list plus `<run-dir>/notes-seed.md` — a verifier-only
+   addition, the default-accepted marks live there) before the operator gate.
 
 ## Gate
 Operator approves `vision.md` + the inventory + the dial (whether this gate fires at the run's

@@ -7,6 +7,8 @@ component authors will see only what this document and the contracts expose.
 ## Inputs
 - `specs/vision.md`, the requirements inventory, the dial (from phase 1).
 - `standards/grammar.md` §4.2, `standards/style.md`, `templates/architecture.md`.
+- Optional calibration, where available: `reference/exemplars.md` (off-limits entirely to an
+  eval run — its §3).
 - **Not** the raw ideation (definition absorbed it; if architecture keeps needing the ideation,
   definition failed — go back).
 
@@ -20,7 +22,7 @@ component authors will see only what this document and the contracts expose.
 1. **Glossary first.** Promote D-lines into canonical terms; resolve synonyms now (one term, one
    meaning, forever). This is the absorbed domain model.
 2. **Data model** (if the product owns durable state): entities, identity rules, and **numbered
-   binding invariants** (identity → dedup/idempotency; cascade rules; timezone/units law; ordering).
+   binding invariants** (invented example classes: `templates/architecture.md` §3 owns the list).
    Invariants are where inventory edge-cases become architecture.
 3. **Decompose into components** by information boundary: a component owns a coherent slice of
    state + behavior and interacts with siblings only through contracts. Right-size the component
@@ -56,9 +58,10 @@ component authors will see only what this document and the contracts expose.
    floor completes at phase 5 — `phases/emission.md` output 7).
 10. **Self-review**, then per the spot-verify schedule (`dial.md` §2): fresh spot-verify —
    lenses: consistency/contract (glossary/inventory), altitude/style, and ideation coverage.
-   The spot-verify package is this phase's input list **plus `reference/ideation.md` and the
-   full inventory** (a verifier-only addition, declared here — the coverage lens needs the
-   source; the author ban on the raw ideation stands).
+   The spot-verify package is this phase's input list **plus `reference/ideation.md`, the full
+   inventory, and `<run-dir>/notes-seed.md`** (verifier-only additions, declared here — the
+   coverage lens needs the sources and the default-accepted marks; the author ban on the raw
+   ideation stands).
 
 ## Gate
 Per the tempo rule (`dial.md` §3 — cited, not restated): where the gate fires, the operator

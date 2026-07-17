@@ -41,6 +41,7 @@ a primary ask (`style.md` §1) · the **registrar** — a successor session perf
 bookkeeping from the verdict records when the run lead's context is lost, or when the eval
 carve-out bars the run from the closing acts (§5) · **gate** — an operator approval point (the
 tempo rule's referent) or, in `change_rule.md` §5, an owed verification whose verdict must return
+**and close** (§5.4)
 · **update mode** —
 re-entering existing artifacts to gap-analyze and touch only what a change requires, never
 regenerating conforming work (the self-review stage and the delta discipline).
@@ -93,7 +94,7 @@ journal — written by the lead, one line per phase transition, gate approval, d
 registrar act), `slices/<component>.md` + `slices/product.md` + `slices/design.md` (UI products),
 `gaps/<component>.md`, `gates/<phase>/` (gate-approved copies — tamper evidence),
 `taxonomy.md` (tier L), and verdict records (delta engagements add `change-request.md` +
-`inventory-delta.md`; a new engagement always works in a fresh dir — a committed prior dir may be
+`inventory-delta.md`, delta slices, and `gates/*-delta/`; a new engagement always works in a fresh dir — a committed prior dir may be
 archived in place, an uncommitted one is archived or deleted by the operator's choice before the
 engagement starts). It is deletable after the seal once its durable
 content is absorbed — the inventory into binding clauses (the phase-6 coverage lens checks this),

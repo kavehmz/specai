@@ -12,7 +12,8 @@ verification (dispatch legitimacy: §2 rule 4).
 
 ## 2. The independence rules (binding)
 
-1. **Fresh context.** A verifier sees only: the relevant specs/inputs, the artifact under review,
+1. **Fresh context.** A verifier sees only: the relevant specs/inputs (exactly rule 4's declared
+   package — never more), the artifact under review,
    its lens brief, and (tier L) the defect taxonomy. The taxonomy is a standing defect-pattern
    list at `<run-dir>/taxonomy.md`, part of the declared package and passed unchanged — never
    selected or edited per review. Its assembly is a **stated mechanical transform**, exempt from
@@ -89,8 +90,8 @@ are `change_rule.md` §5's); the mid-run cadence is owned by the spot-verify sch
 | Tier | Phase-6 seal of an emitted repo | Mid-run spot-verifies |
 |---|---|---|
 | **S** | mechanical pass (`grammar.md` §6) + **1** fresh verifier running all applicable lenses (carrying the judgment-gate brief as its own verdict section — `phases/verification.md`) | per `dial.md` §2 |
-| **M** | mechanical pass + **2** fresh verifiers with split lenses (the templated dispatch names the split; default: coverage + outcomes + lifecycle + **buildability** / consistency + altitude + executability + adversarial-user) + the judgment gate as an additional fresh context | per `dial.md` §2 |
-| **L** | mechanical pass + panel of **≥3** distinct-lens verifiers (the templated dispatch names the partition) + the judgment gate as an additional fresh context + adversarial re-verify of fixes | per `dial.md` §2 |
+| **M** | mechanical pass + **2** fresh verifiers with split lenses (the templated dispatch names the split; default: coverage + outcomes + lifecycle + **buildability** / consistency + altitude + executability + adversarial-user) + the judgment gate (dispatch shape per `phases/verification.md`) | per `dial.md` §2 |
+| **L** | mechanical pass + panel of **≥3** distinct-lens verifiers (the partition is named in the operator's seal order) + the judgment gate (dispatch shape per `phases/verification.md`) + adversarial re-verify of fixes | per `dial.md` §2 |
 
 **Lens totality (every tier):** the union of the dispatched lens briefs MUST equal the applicable
 §5 set — a lens with no dispatched carrier blocks the seal.
@@ -107,8 +108,8 @@ Change-time gating after emission follows the emitted repo's own standard (insta
 
 | Lens | Hunts for |
 |---|---|
-| **Ideation coverage** | procedure: read the ideation *first*, derive your own expectation of the product, then hunt the tree for each expectation. Every ask in `reference/ideation.md`, every checkpoint answer, **and every requirements-inventory line** traces to a binding clause **or** a revisitable non-goal in `vision.md` (a cut recorded only in NOTES is a coverage FAIL — NOTES holds rationale, never the cut); **and the reverse**: every revisitable non-goal traces back to an X-line or a recorded checkpoint answer — an unprovenanced cut is a coverage FAIL (it may be laundering a miss); checkpoint answers marked default-accepted weigh as factory assumptions, not operator choices; nothing the human asked for silently vanished |
-| **Change-request coverage** *(delta engagements)* | the delta analog of ideation coverage: every line of the change request + delta inventory traces to a binding clause or a vision.md non-goal entry; nothing the request asked for silently vanished |
+| **Ideation coverage** | procedure: read the ideation *first*, derive your own expectation of the product, then hunt the tree for each expectation. Every ask in `reference/ideation.md`, every checkpoint answer, **and every requirements-inventory line** traces to a binding clause **or** a revisitable non-goal in `vision.md` (a cut recorded only in NOTES is a coverage FAIL — NOTES holds rationale, never the cut); **and the reverse**: every non-goal (identity or revisitable) traces back to an X-line or a recorded checkpoint answer — an unprovenanced entry is a coverage FAIL (a cut may launder a miss; an identity entry injects unprovenanced firewall scope); checkpoint answers marked default-accepted weigh as factory assumptions, not operator choices; nothing the human asked for silently vanished |
+| **Change-request coverage** *(delta engagements)* | the delta analog of ideation coverage, both legs: every line of the change request + delta inventory traces to a binding clause or a **revisitable** non-goal in `vision.md` (a cut recorded only in NOTES is a FAIL); **and the reverse**: every non-goal the delta adds or changes traces to a change-request line or a recorded checkpoint answer — an unprovenanced addition is a FAIL; nothing the request asked for silently vanished |
 | **Consistency/contract** | citations resolve; glossary terms single-defined and used verbatim; pinned values agree across documents; contract shapes match everywhere they're cited |
 | **Outcomes** | independently recompute every binding worked example; re-derive formulas and boundary math from the prose |
 | **Adversarial-user** | abuse paths, edge inputs, failure modes, idempotency and money-safety holes the specs are silent on |
@@ -145,7 +146,8 @@ a recorded reason. Minors may ride, listed. Where findings land:
    never replaces them. Records outlive the run dir: **before a run dir is deleted, its verdict
    records (raw reports included) relocate to a durable committed home** — the factory's
    `verdicts/`, or for an emitted repo a committed `verdicts/` beside `NOTES.md` — and the NOTES
-   seal line cites the final path; `<run-dir>/taxonomy.md` and the preserved dispatch prompts
+   seal line cites the final path; `<run-dir>/taxonomy.md`, the preserved dispatch prompts, the
+   gate copies (`gates/**`), and a delta's `change-request.md`
    relocate with the records (so the diff backstop sees them); the run's **new** defect patterns
    reach the cross-run seed via the run-closing distillation `SKILL.md` §5 owns (this rule does
    not specify a second append).

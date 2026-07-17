@@ -72,7 +72,8 @@ An eval run is a normal `new product` run plus a comparison verdict; findings fe
    this file stays excluded, so its imitation notes are unavailable during an eval).
 3. **The comparison panel — ≥2 fresh contexts — is dispatched by the operator**, never by the
    run being evaluated (`verification_core.md` §2 rule 4). The panel receives both repos; the
-   run never does. The comparison verdict lands at `<run-dir>/verdict-comparison-<target>.md`.
+   run never does. **The operator (or their non-run orchestrator) compiles** the panel's verbatim
+   reports into the comparison verdict at `<run-dir>/verdict-comparison-<target>.md`.
 4. **No PASS without the integration proof**: the **operator launches** a fresh builder context
    to `develop` the emitted repo end-to-end through its own `start.md`, and **separately
    dispatches** the proof's verification pass to another fresh
@@ -85,8 +86,9 @@ An eval run is a normal `new product` run plus a comparison verdict; findings fe
    **Never** byte similarity (different good decisions are fine; missing asks and grammar
    violations are not).
 6. **The eval preamble sweeps specai's open IOUs and enumerates the exempted-edit bundle**
-   (`change_rule.md` §5 rules 3–4), recording the sweep's result in the comparison verdict
-   record: an IOU past its anchor blocks the eval until paid or operator-re-anchored.
+   (`change_rule.md` §5 rules 3–4), recording the sweep's result in the run journal at preamble
+   time and echoing it into the comparison verdict record: an IOU past its anchor blocks the
+   eval until paid or operator-re-anchored.
 
 7. **The eval run's own dispatch is templated and preserved.** The operator (or a non-run
    orchestrator that never leads the run) launches the run with the fenced prompt below —

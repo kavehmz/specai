@@ -22,8 +22,9 @@
 
 ## 3. The data model (binding) *(when the product owns durable state)*
 > The schema verbatim (this document owns it; the wire truth is the contract standard's — say so).
-> Then **numbered binding invariants**: identity/dedup rules, cascade behavior, units/timezone law,
-> ordering law, health semantics. Every invariant is testable.
+> Then **numbered binding invariants** (invented example classes: identity/dedup rules, cascade
+> behavior, units/timezone law, ordering law — use what the product actually needs). Every
+> invariant is testable.
 
 ## 4. The components
 > Prose: how the product decomposes and what "component" means here (spec areas vs deployables).
@@ -54,7 +55,9 @@
 ## 7b. Money & compliance *(only when regulatory/money scores 2 — `dial.md` §1)*
 > The money flows and custody/settlement rules; every REG-line of the regulatory register mapped
 > to its enforcing component or principle; the audit surfaces (what is inspectable, what is
-> queryable, what is immutable). Money-path changes gate at top tier — say so here.
+> queryable, what is immutable). Close with this binding definition, emitted verbatim:
+> "A **money-path** change is any edit to a clause cited by this section; money-path changes
+> take this repo's deepest verification before landing."
 
 ## 8. What this architecture deliberately does not have
 > Bulleted negatives with teeth (invented examples: no second datastore, no telemetry, no

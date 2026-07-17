@@ -131,7 +131,8 @@ its own.
 - **Honesty:** report what failed as failed; an unverified checklist item is unchecked.
 - **Independent verification:** <per tier — (S) for substantial builds or any change to <binding
   set>, verify with fresh eyes: derive expected behavior from the spec first, then drive the
-  running app to refute "done"; money-path changes (products with regulatory/money = 2) always
+  running app to refute "done"; where `architecture.md` carries a Money & compliance section,
+  money-path changes (defined there) always
   get a genuinely fresh context — a separately dispatched session, not the builder's own fresh
   eyes; (M/L) dispatch per the verification standard — independence is the
   channel: a fresh context, the declared spec package, a fixed brief; never the builder's

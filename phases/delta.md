@@ -41,13 +41,15 @@ the operator, explicitly, as a vision edit — `change_rule.md` §2).
    §2). Amend vision if the WHY itself changes (rare, loud). Produce a **delta inventory**
    (`<run-dir>/inventory-delta.md`): new/changed/retired requirement lines, source-tagged to the
    request. Checkpoint questions only for what the request leaves open. Spot-verify where the
-   schedule fires (`dial.md` §2), in its delta reading (change-request coverage; the delta
-   inventory as the source). **Operator gate**
+   schedule fires (`dial.md` §2), in its delta reading (change-request coverage;
+   `<run-dir>/change-request.md` **and** the delta inventory as the sources — both join the
+   package). **Operator gate**
    (delta gates mirror the tempo rule, `dial.md` §3: this one always) — approved artifacts
    copied to `<run-dir>/gates/definition-delta/` (SKILL §3).
 2. **Architecture delta.** Re-enter `phases/architecture.md` in update mode (its spot-verify
    step included where the schedule fires, with the delta substitutions: the full inventory →
-   `inventory-delta.md` + the delta slices; ideation coverage → change-request coverage; the
+   `inventory-delta.md` + the delta slices; ideation coverage → change-request coverage, and
+   `<run-dir>/change-request.md` joins the spot-verify package; the
    ideation itself stays — it lives in the sealed repo): glossary additions, data-model changes (with
    migration implications named loudly), component-map changes, principle changes (top-tier
    scrutiny), coverage re-check of the delta inventory — assigning its lines to owning components
@@ -68,7 +70,8 @@ the operator, explicitly, as a vision edit — `change_rule.md` §2).
 5. **Emission delta.** Reconcile the operating manual: boot-table rows, cascade graph, README map,
    command grammar if surfaces changed. Reconcile `DRIFT.md` when present (re-point owning-§
    citations the delta moved; delete items it resolved or made moot). Append the engagement to the
-   repo's `NOTES.md` (what changed, why, decisions, any reversed cuts with the operator's say-so).
+   repo's `NOTES.md` (what changed, why, decisions, any reversed cuts with the operator's say-so,
+   **and the phases re-run** — fenced check 2's source).
 6. **Delta verification & seal — a phase-6 seal in every duty** (`phases/verification.md`'s
    dispatch authority, verifier counts per `verification_core.md` §4's tier row, the judgment
    gate, the seal-presentation sweeps, and its fenced Verifier checks all apply; this step adds
@@ -77,7 +80,7 @@ the operator, explicitly, as a vision edit — `change_rule.md` §2).
    (`phases/verification.md` — dial §2, specai's NOTES, templates/, tier-L taxonomy and all),
    with these delta substitutions**: `reference/ideation.md` → `<run-dir>/change-request.md`;
    the inventory → `<run-dir>/inventory-delta.md` + the delta slices; the consumer ledger →
-   only where step 3 ran; the NOTES seed → the
+   included only where step 3 ran; the NOTES seed → the
    appended repo-NOTES entry; the gate copies → `<run-dir>/gates/*-delta/`; plus the derived
    cascade set named in the dispatch (derived per `change_rule.md` §3, never asserted). The
    fenced Verifier checks apply in their delta readings (stated inside the checks). **All

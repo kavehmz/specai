@@ -26,7 +26,7 @@ record names both.
 
 Verifier package (independence rules apply): the emitted repo, `reference/ideation.md`, the
 inventory + consumer ledger + NOTES seed and the gate copies (`<run-dir>/gates/`), the
-spot-verify records plus `standards/dial.md` §2, specai's `NOTES.md`, the lens briefs and conduct
+spot-verify records plus `standards/dial.md` §2–§3, specai's `NOTES.md`, the lens briefs and conduct
 rules (`standards/verification_core.md`), `standards/style.md`, `standards/grammar.md`,
 `templates/` (the grammar's tiebreaker), and at tier L `<run-dir>/taxonomy.md`. **Eval
 exception:** during an eval, specai's `NOTES.md` is excluded from this package
@@ -38,13 +38,15 @@ exception).
 **Verifier checks (verbatim — travels in the brief per `verification_core.md` §2 rule 4):**
 
 ```
-1. Diff EVERY artifact under <run-dir>/gates/** against its sealed counterpart — unexplained
-   post-gate changes are findings. (Delta engagements: baselines live under gates/*-delta/;
-   the inventory's counterpart is inventory-delta.md, the NOTES seed's is the appended
-   repo-NOTES entry.)
+1. Derive the fired-gate set from the tempo rule (dial.md §3; delta gates per delta.md steps
+   1-3), then diff EVERY artifact under <run-dir>/gates/** against its sealed counterpart —
+   unexplained post-gate changes are findings, and an absent or empty gates/<phase>/ for a
+   fired gate blocks like an unpaid IOU. (Delta engagements: baselines live under
+   gates/*-delta/; the inventory's counterpart is inventory-delta.md, the NOTES seed's is the
+   appended repo-NOTES entry.)
 2. Derive the expected spot-verify record count — from the tier's schedule (dial.md §2) for a
-   full run, or from the phases actually re-run for a delta — and count the records
-   (verdict-spot-<phase>-<date>.md). A mismatch is a finding.
+   full run, or for a delta from the re-run phases the appended repo-NOTES entry MUST
+   enumerate — and count the records (verdict-spot-<phase>-<date>.md). A mismatch is a finding.
 3. (non-eval seals) Sweep specai's NOTES.md for open IOUs and the exempted-edit bundle — a
    past-anchor IOU is a finding.
 ```
@@ -54,9 +56,9 @@ The two lenses that decide most seals — **ideation coverage** and **buildabili
 real — a design spec with binding interaction behavior, not adjectives.)
 
 Plus the **judgment gate** (`verification_core.md` §7 — its failure classes live there, cited
-whole). Its dispatch shape: at tier S the judgment-gate brief **folds into the single verifier's
-dispatch** (one dispatch, reported as its own verdict section); at M/L it is an **additional
-fresh context** beyond the lens verifiers.
+whole). This paragraph owns the dispatch shape (§4's rows cite it): at tier S the judgment-gate
+brief **folds into the single verifier's dispatch** (one dispatch, reported as its own verdict
+section); at M/L it is an **additional fresh context** beyond the lens verifiers.
 
 ## Fix loop
 Route each finding to the phase that owns it (a coverage miss → phase 1/2; a contract hole →
