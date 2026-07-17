@@ -47,6 +47,8 @@ phases/delta.md               ← Δ · the delta engagement: product-reshaping 
 templates/                    ← vision · architecture · start (crown) · component_spec ·
                                 contract_standard · engineering_standard · notes
 reference/exemplars.md        ← the two ground-truth repos: read paths, imitation notes, eval fixtures
+verdicts/                     ← verification verdict records for the skill itself (+ pending
+                                operator-decision packets they produce)
 NOTES.md                      ← specai's own decision ledger
 ```
 

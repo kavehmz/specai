@@ -193,6 +193,9 @@ unchanged.
 `DRIFT.md` before it ends; spec edits also re-point/moot DRIFT items whose owning §s they move
 (the in-repo mirror of the delta engagement's step-5 duty).
 
+*(Superseded same day: the full standards panel below ran after this change landed — see the
+2026-07-17 panel entry.)*
+
 **Verification status:** two same-day fresh-context review rounds ran pre-commit, both dispatched
 by the author — self-QA per `verification_core.md` §2 rule 4, **not** the gate. Round 1 (one
 verifier, all lenses): FAIL — 2 majors (the §6 seal check contradicted delta re-seals; emitted
@@ -208,3 +211,27 @@ operator: this is the third consecutive standards change to defer the pre-landin
 panel review — either exercise the panel or amend `change_rule.md` §5 to name the deferral path.
 feedler, sealed before this existed, can adopt it through its own change process. Operator
 countersign = Kaveh's commit of this change.
+
+## 2026-07-17 — The founding panel review ran: unanimous FAIL, fix loop deferred
+
+The operator dispatched the full standards panel over the whole skill at `1af9e4e` — paying the
+pre-landing gate deferred by the founding tree, the delta engagement, and the DRIFT change. Four
+fresh-context verifiers, distinct lenses (consistency/contract · executability · altitude/style ·
+judgment+adversarial), blind to the authoring sessions and to each other.
+
+**Verdict: FAIL on all four lenses — zero blockers, ~24 deduped majors, ~23 minors.** The full
+record: `verdicts/2026-07-17-standards-panel.md`. The majors cluster: the practice not binding
+itself (dispatch legitimacy, the §5 gate, degraded-disclosure durability, harness contamination,
+the eval protocol); founding consistency debts (engineering-standard ownership, seal/tempo term
+overloads, verdict-record tier contradiction, unnamed working files, map rot, private-exemplar
+tiebreaker); and two design findings (money/reg machinery keyed to tier not dimension; no mid-run
+dial re-score). What held up everywhere: the phase cuts, the DRIFT lifecycle, gates fail closed,
+template discipline, this ledger's honesty.
+
+Six findings need operator design decisions before the fix loop:
+`verdicts/2026-07-17-operator-decisions-D1-D6.md` (plain-language packet). **Fix loop deferred by
+the operator to a fresh session** — resume by reading the two verdicts/ files; the resolution log
+in the verdict record is the work list; blind re-verification per `verification_core.md` §3
+follows the fixes; the operator's countersign closes.
+
+Map updated (`SKILL.md` §1: verdicts/ added). Operator countersign of this record = the commit.
