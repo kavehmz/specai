@@ -1,7 +1,7 @@
 # Post-seal audit — lens 4: judgment gate + adversarial (verbatim report)
 
 *Preserved verbatim per `verification_core.md` §6 rule 4. Post-seal audit round over the sealed
-tree (d86eec3). Package: the tree minus `verdicts/`/.git. Brief carried the operator's recorded
+tree (630ac46). Package: the tree minus `verdicts/`/.git. Brief carried the operator's recorded
 acceptances (a)–(e) with accepted-class severity, disclosed per §2 rule 4.*
 
 ---

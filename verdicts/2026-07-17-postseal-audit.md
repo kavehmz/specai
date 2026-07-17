@@ -1,4 +1,4 @@
-# Verdict record — post-seal audit over `d86eec3` · 2026-07-17
+# Verdict record — post-seal audit over `630ac46` · 2026-07-17
 
 **What this is:** a four-lens fresh-context audit of the sealed tree, run at the operator's
 invitation after the panel engagement closed — information, not a gate. **Dispatcher:** the

@@ -1,7 +1,7 @@
 # Post-seal audit — lens 2: executability/buildability (verbatim report)
 
 *Preserved verbatim per `verification_core.md` §6 rule 4. Post-seal audit round over the sealed
-tree (d86eec3). Package: the tree minus `verdicts/`/.git.*
+tree (630ac46). Package: the tree minus `verdicts/`/.git.*
 
 ---
 

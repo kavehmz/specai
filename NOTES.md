@@ -419,7 +419,7 @@ copies, and a process that caught and recorded its own false claims twice.
 
 ## 2026-07-17 — Post-seal audit (operator-invited): 0 blockers, ~9 majors found and fixed; IOU recorded
 
-After the seal (`d86eec3`), the operator invited one more four-lens audit — information, not a
+After the seal (`630ac46`), the operator invited one more four-lens audit — information, not a
 gate. **FAIL ×4 with zero blockers**; ~9 deduped majors, half final-wave residue, half
 multi-round survivors. The two catches that justified the round: the **money-path definition
 never reached the emitted world** (emitted repos gated on a term only a factory file defined —
@@ -434,7 +434,40 @@ owed gate = focused pass + panel per §5, verdicts returned and closed · anchor
 seal or eval (the feedler build-proof or L4, whichever first). Operator countersign of this
 audit + fixes = the commit.
 
+## 2026-07-17 — External review (Kimi) triaged; bookkeeping done; standards batch queued
+
+The operator brought an outside AI's review of the tree (`kimik3_notes.md`, untracked) and had
+this session assess it. **Verdict: high quality — its checkable claims verified** (the orphaned
+seal SHA, the missing taxonomy seed, the unexercised delta, the deferred speclint), with two
+substantive corrections: (1) round 6's five majors were **fixed**, not accepted — what the close
+accepted was landing those fixes without a further blind round (acceptance (e)); Kimi's obs-2
+framing overstates. (2) S3's anchor-relaxation solves an already-solved problem — §5.4's IOU has
+been the legal deferral path since it landed, and the thrice-repeated deferrals predate it.
+
+**Zero-gate bookkeeping applied now:** the seal SHA corrected `d86eec3` → `630ac46` in this
+ledger and the five audit records (the amend orphaned the cited commit — second instance of the
+class; the ledger↔tree truthfulness check does not cover SHA prose, noted); citation habit
+adopted going forward: message + date + SHA. `verdicts/taxonomy-seed.md` **created** by the §2
+rule 1 transform from the committed records (~100 lines; registrar bookkeeping; fixture-flagged
+lines marked † for trivial eval scrubbing).
+
+**Operator decisions (queued for the IOU-payment panel batch — these touch gated surfaces and do
+NOT land until that panel closes):** S2 adopt — operator-accepted majors fold into NOTES open
+topics with reason/date/revisit anchor (verification_core §6 rule 1 + this ledger's standing
+heading; retro-entry covers the standing acceptance classes). S3 **brake only** — no new
+normative sentence lands without naming the finding it answers (change_rule §5); the anchor
+relaxation declined as redundant with §5.4. S8 adopt — the definition checkpoint gains the
+honest floor option below ~dial 2 (one-verifier gate).
+
+**Adopted execution order (Kimi's, confirmed):** IOU payment (focused pass + panel over
+`c3ea19a`'s fixes, batched with S2/brake/S8) → the tier-S build-proof → a tier-S delta drill on
+the emitted repo before L4 → speclint.py (emitted + factory modes; recover the L1 run's seed
+script if present). The batching question (one landing = one panel) is put to that panel's
+brief. Operator countersign of this entry = the commit.
+
 ## Exempted edits
+- 2026-07-17 · NOTES.md + 5 verdicts/ records · orphaned seal SHA corrected (record fix, ungated
+  by nature; logged here for the one-reader guarantee).
 
 *(standing heading per `change_rule.md` §5 rule 3 — one line per typo/clarity-exempted edit;
 enumerated at every seal/eval preamble. Currently empty.)*
