@@ -12,11 +12,15 @@ documents exist, this defines how every one of them is written. Verifiers judge 
   variable names are the builder's — a spec that transcribes them is defective.
 - **Omitted WHAT is a defect, equal to transcribed HOW.** If rebuilding from the spec alone would
   lose a feature, surface, interaction, state, or behavior the product is meant to have, the spec is
-  incomplete. **Conciseness is never the goal; completeness of the WHAT is.** For experience-led
-  products, interaction design (surfaces, controls, key interactions, states) is binding WHAT,
-  described as behavior — never a single impressionistic paragraph, and never pixels.
-- **The one licensed HOW:** the engineering standard names the stack at category level
-  (`grammar.md` §4.7); changing it is a spec change.
+  incomplete. **Conciseness is never the goal; completeness of the WHAT is.** For **experience-led**
+  products (the ideation's value hinges on interaction feel — it names UX benchmarks or look-and-feel
+  as a primary ask), interaction design (surfaces, controls, key interactions, states) is binding
+  WHAT, described as behavior — never a single impressionistic paragraph, and never pixels.
+- **The one licensed HOW-document:** the engineering standard (`grammar.md` §4.7) is the sole
+  document licensed to bind HOW-level choices — exactly the sections
+  `templates/engineering_standard.md` defines; the template owns that enumeration (§4.7 defers to
+  it) and it is not repeated here. Changing any of it is a spec change. Every other document
+  stays WHAT-only.
 
 ## 2. The eleven working rules
 
@@ -25,8 +29,8 @@ documents exist, this defines how every one of them is written. Verifiers judge 
    with two meanings is a blocker-class defect.
 2. **Contracts verbatim, implementation descriptive.** Endpoints, JSON shapes, schema columns,
    config keys, and literal output formats are quoted exactly, once, in the document that owns them;
-   every other document *cites* the owner, never restates. ("The export request contract is
-   `api_contract.md` §6 — do not duplicate it here" is the pattern.)
+   every other document *cites* the owner, never restates. (An invented example of the pattern:
+   "The billing request contract is `wire_contract.md` §6 — do not duplicate it here.")
 3. **Worked examples as binding test cases.** Wherever a transformation has a right answer (a
    payout formula, a timezone boundary, a format), give a concrete input→output example, fence it,
    and label it **binding**. These become the highest-value unit tests and the outcomes lens's
@@ -49,7 +53,7 @@ documents exist, this defines how every one of them is written. Verifiers judge 
    component-local; whole-product risk/audit/deployment live in the engineering standard (stated,
    not assumed).
 9. **Traceability by name, not apparatus.** Cite `file.md §section` — precise named citations are
-   the default. Stable requirement IDs only at tier L (`dial.md`), and only when citations strain.
+   the default. Stable requirement IDs per `grammar.md` §5's requirement-ID row.
 10. **Patterns over instances in process docs.** Process documents (start.md, standards) speak in
     roles — "a component", "the contract", "the operator" — never in borrowed domain examples that
     a builder might mistake for requirements. (Product specs, by contrast, are maximally concrete.)

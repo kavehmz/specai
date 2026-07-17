@@ -84,6 +84,10 @@ panel review before heavy use; the L1 eval run doubles as its live-fire test. Op
 
 ## 2026-07-11 — L1 eval: reproduce feedler — PASS (class parity, locally exceeded)
 
+*(Superseded 2026-07-17: relabeled per the hardened eval protocol — the honest verdict is
+"comparison passed; build-proof pending"; the run pre-dated eval hygiene: the target exemplar was
+readable and the comparison was self-dispatched. `reference/exemplars.md` §3.)*
+
 **The run** (same day as founding — the skill's first full engagement): dial scored 2 → tier S,
 matching the calibration anchor exactly. Six isolated component authors, four blind verification
 rounds (majors 4 → 1 → 1 → 0; zero blockers ever; every binding worked example independently
@@ -235,3 +239,185 @@ in the verdict record is the work list; blind re-verification per `verification_
 follows the fixes; the operator's countersign closes.
 
 Map updated (`SKILL.md` §1: verdicts/ added). Operator countersign of this record = the commit.
+
+## 2026-07-17 — D1–D6 decided; fix loop unblocked
+
+The operator resolved all six panel design decisions in a fresh session (independent of the
+authoring sessions and the panel; it concurred with the session lead's yes-to-all-six and adjusted
+four). All six accepted in adjusted form — full resolutions with fix homes appended to
+`verdicts/2026-07-17-operator-decisions-D1-D6.md` (now the binding work order alongside the panel
+record's resolution log). In one line each: **D1** review weight keyed to target doc (1 verifier
+for standards edits; panel for the self-governing surfaces; deferral becomes a named IOU; this
+panel pays the three old ones) · **D2** money machinery keyed to the reg/money dimension scoring 2,
+re-score generic to any dimension · **D3** independence = channel (fresh context + declared package
++ templated brief); lead dispatches with zero discretion; operator dispatches seal + specai reviews
+· **D4** tier binds in `vision.md`; non-goals split into identity vs revisitable-cut classes ·
+**D5** eval excludes the target exemplar only; operator-dispatched comparison; no PASS without
+build-proof; L1 relabeled honestly · **D6** licensed-HOW exception scoped by the template's
+sections, cited not restated.
+
+Remaining: the fix loop over the panel's ~24 majors (+ minors), then blind re-verification per
+`verification_core.md` §3, then the operator countersign. Operator countersign of these
+resolutions = the commit.
+
+## 2026-07-17 — The fix loop ran: panel findings fixed, round-1 blind re-verification FAILed, round-2 fixes applied
+
+Same session as the D1–D6 resolutions, operator-ordered ("go"), run lead as mechanical proxy.
+
+**Round 1 (the panel's findings):** every major (~24), all 23 minors, and three judgment items
+(J-emphasis, J-defaults, J-neglect) fixed per the D1–D6 work order; per-finding evidence in the
+panel record's resolution log (`verdicts/2026-07-17-standards-panel.md`). J-M-anchor and
+J-S-proportionality accepted (recorded there).
+
+**Blind re-verification, round 1** (four fresh verifiers, panel lens split, `verdicts/` excluded
+from packages; first dispatch was killed by a harness usage limit and relaunched clean —
+disk-state resume held): **FAIL ×4 — 1 blocker, ~29 majors (deduping to ~20), ~27 minors.** The
+blocker was this ledger lagging the fixed tree mid-session (entry owed before re-dispatch — the
+lesson: **the NOTES entry lands with the fixes, not after their verification**; adopted as
+practice, this entry is its first instance). The majors clustered: eval answer-key facts embedded
+in binding docs (quarantined to `reference/exemplars.md`, which eval runs now exclude); tier-S
+verdict-record/disclosure gaps (records now written at every seal, committed by default);
+engineering-standard inline-path incoherence (phase 3 now writes it in every case); the money
+section and regulatory register invoked but undefined (now defined: grammar §4.2/§4.11,
+architecture template §7b, definition REG-lines); self-change gate holes (templates,
+SKILL §4–§5, exemplars.md now gated; IOUs got a collector at seals/evals; degraded seals now owe
+an IOU); a coverage-lens cheat via NOTES-only cuts (cuts now count only in vision.md);
+author-asserted cascade sets (now derived from the citation graph); working-file gaps
+(consumer-ledger.md, journal.md, slices/design.md named). All round-1 findings and resolutions:
+the verdict record's round-1 section.
+
+**State at this entry:** round-2 fixes are applied; round-2 blind confirmation (four fresh
+lenses) is dispatched and pending. Accepted without fix (operator, via the session's standing
+order): lens-4 minor "nested-parenthetical prose density" — style debt for a future altitude
+pass, does not change behavior. The engagement closes with the round-2 verdict and the operator's
+countersign; this entry is truthful as of dispatch, and the round-2 outcome gets its own entry.
+
+## 2026-07-17 — Round 2 returned FAIL ×4; round-3 fixes applied; **IOU recorded**
+
+Round-2 blind confirmation returned FAIL on all four lenses — 1 blocker (the eval answer-key
+quarantine was incomplete: identifying facts survived in six binding files; found independently
+by three lenses), ~18 deduped majors, ~29 minors. The raw verifier reports are preserved verbatim
+(new rule, adopted and practiced this round): `verdicts/2026-07-17-reverify-r2-lens*.md`; the
+findings→resolutions map is the panel record's round-2 section. Round-3 fixes are applied across
+the tree — the quarantine completed (grammar, four templates, emission, SKILL routing, echoes),
+evals now also exclude specai's own NOTES.md (this file carries fixture answer keys), the
+judgment-gate/eval briefs joined the conforming-brief rule, the taxonomy got a defined mechanical
+transform + cross-run seed file, gates got tamper-evident copies (`<run-dir>/gates/`), the
+coverage lens got the reverse-provenance check, spot-verifies now write records, cascade
+derivation went bidirectional, "a gate has run only when its verdict is returned," and specai
+never commits, ever.
+
+Two structural learnings, recorded as practice: (1) verifier reports are preserved verbatim as
+files from now on — the lead's dedup cites, never replaces them; (2) per lens 4's judgment
+summary, the remaining risk class is concentrated: the run lead wears every hat, so the correct
+fixes are operator-visible tamper-evident surfaces (gate copies, raw reports, durable records,
+enumerated collectors) rather than more lead-maintained rules — this round added exactly those.
+
+**IOU (change_rule.md §5 rule 4):** change = the round-3 fixes (this entry's tree) · owed gate =
+blind confirmation, four fresh lenses, verdicts returned · anchor = before this engagement's
+countersign (no seal or eval may run before it is paid). Round-3 confirmation is dispatched; its
+returned verdicts pay this IOU and get their own entry.
+
+## 2026-07-17 — Round 3 returned FAIL ×4; two ledger corrections; operator triage requested
+
+Round-3 blind confirmation: FAIL on all four lenses — 3 deduped blockers, ~21 deduped majors
+(raw reports verbatim at `verdicts/2026-07-17-reverify-r3-lens*.md`; findings map in the panel
+record's round-3 section).
+
+**Two corrections to this ledger's own prior entries (the verifiers caught both):**
+1. The previous entry's claim "the quarantine completed" was **false** — `README.md`'s invocation
+   examples still name the tier-S fixture (missed by the sweep), and four fuzzy echoes survive
+   (architecture's decomposition shapes, definition's product-category example, the vision
+   template's pillar example, dial's preamble). The quarantine is incomplete until those land.
+2. The IOU above is written in a defective letter: §5 rule 4 says an IOU is paid "by the owed
+   gate's verdict **returning**" — under which a returned FAIL pays the debt. The intended and
+   correct reading, binding for this IOU: **payment = the gate closing** (PASS, or FAIL resolved
+   per verification_core §6). This IOU therefore remains **open**: three FAIL verdicts have
+   returned and none has closed.
+
+**State:** the letter/quarantine/enumeration finding classes are objective and lead-fixable. The
+trust-root class (gate baselines the lead can rewrite, packages lead-asserted, collectors
+lead-fed, the integration proof self-graded at S) is fixable only by adding **operator duties**
+(gate-time commits of baselines, eval input staging, operator-dispatched build proofs) or by
+operator-accepting the residual trust with recorded reason — a design decision the operator must
+make (D1's lesson: a rule the operator won't live by is a bad rule). Triage requested; the fix
+loop resumes on the operator's decision.
+
+## 2026-07-17 — Operator triage: two eval duties adopted, gate-commit ceremony declined; round-4 fixes landed
+
+The operator chose **triage & close**. Adopted into the standards: **eval staging** (operator
+stages eval inputs and a scrubbed taxonomy; `verdicts/` joins the eval exclusion — exemplars §3
+rule 2) and **eval build-proof dispatch** (operator dispatches the proof's verifier, which signs
+the DoD line — exemplars §3 rule 4). Declined: gate-time operator commits of baselines —
+**accepted with reason**: gate copies remain lead-held; the operator reviews diffs at commit
+time, and the countersign commit is the operator-fixing act; per-gate commits would be ceremony
+not lived by. All other round-3 findings (3 blockers, remaining majors, minors) are fixed —
+per-finding map in the panel record's triage section; raw round-3 reports at
+`verdicts/2026-07-17-reverify-r3-lens*.md`.
+
+The **IOU above remains open** under the corrected payment rule (a gate closes by PASS or
+resolved FAIL — `change_rule.md` §5.4). Round-4 blind confirmation is dispatched as the closing
+gate; per the triage decision, judgment-class residue inside the accepted trust-root class does
+not reopen the loop. Its outcome and the operator countersign close this engagement.
+
+## 2026-07-17 — Round 4 FAILed on sibling-path enumeration; round-5 fixes landed; letter refinement disclosed
+
+Round-4 blind confirmation: FAIL ×4 — 1 deduped blocker (my round-4 NOTES-in-package edit
+colliding with eval hygiene, found independently by two lenses), ~10 deduped majors, all in one
+named class: every hardening rode the main path and missed a sibling path (eval-internal seals,
+delta seals, spot-verify briefs). The trust-root class **held as accepted** — the judgment lens
+honored the recorded acceptance and confirmed ledger↔tree agreement. Raw reports:
+`verdicts/2026-07-17-reverify-r4-lens*.md`; the findings→resolutions map is the panel record's
+round-4 section.
+
+Round-5 fixes are applied (the eval carve-out; attestation travels in the brief; fenced verifier-
+checks blocks; the delta path joined every mitigation; the eval route operationalized with a
+preserved templated dispatch prompt; no degraded-mode evals; the remaining echoes de-numbered).
+**One disclosed design call:** the quarantine letter was refined — it now covers facts
+characterizing a *specific named* exemplar and licenses tier-neutral role references, since a
+target's tier is ideation-derivable by design; the round-5 confirmation verifies the refinement.
+The **IOU above remains open**; round-5 confirmation is dispatched as its closing gate — its
+verdicts, this ledger's final entry, and the operator countersign end the engagement.
+
+## 2026-07-17 — Round 5 FAILed on the last mile; round-6 fixes landed; two ledger claims corrected
+
+Round-5 blind confirmation: FAIL ×4 — 1 blocker (the delta seal's package contradicting the
+checks it imports; three-lens convergence), ~9 deduped majors. **Two of the previous entry's
+claims were partially false and are corrected here:** "the eval carve-out" had not reached
+SKILL §5's run-closing acts, and "the delta path joined every mitigation" missed step 2's gate
+copy and the check mapping. What verified clean: the refined quarantine letter (two lenses), the
+eval-exclusion invariant, all canonical terms, pinned values, ownership seams, DRIFT, the IOU
+letter, and the money trigger. Raw reports: `verdicts/2026-07-17-reverify-r5-lens*.md`;
+resolutions in the panel record's round-5 section.
+
+Round-6 fixes are applied — the delta seal now runs the phase-6 machinery by named substitution,
+check 1 diffs everything under `gates/**`, the eval path is complete end-to-end (close-out is the
+operator/registrar's; the taxonomy carve-out is in readable text), the emitted start template
+carries the commit rule it had somehow never received, and the seal-operating text joined the
+panel-gated class. The **IOU above remains open**; round-6 confirmation is dispatched as its
+closing gate.
+
+## 2026-07-17 — Round 6: zero blockers ×4; closing fixes applied; engagement presented for countersign
+
+The closing round: FAIL ×4 on majors but **zero blockers on all four lenses** — first time in
+the engagement. Five deduped majors, maximally convergent (the M-split buildability omission — a
+round-6 edit's own defect — found by all four lenses independently). The judgment lens verified
+every prior NOTES claim true against the tree; the quarantine, eval path, IOU letter, and both
+ledger self-corrections all held under attack. Raw reports:
+`verdicts/2026-07-17-reverify-r6-lens*.md`.
+
+All round-6 findings are fixed (the lens-totality rule chief among them: at every tier the union
+of dispatched briefs MUST equal the applicable lens set). Per the operator's standing
+triage-and-close decision and their explicit in-session confirmation that round 6 is the last
+round: **no seventh blind round.** The closing acceptance packet — the fixes landing on direct
+diff review, the standing accepted classes, and one recorded edge — is in the panel record's
+"Engagement close" section. **The operator's commit is the acceptance, the IOU's payment, and
+the countersign.** Trajectory for the record: blockers 1→3→3→1→0; majors ~24→~9→5, structural →
+letter-level. What this engagement leaves behind besides the hardened tree: verbatim verifier
+reports as standing practice, the taxonomy seed, the exempted-edits ledger, tamper-evident gate
+copies, and a process that caught and recorded its own false claims twice.
+
+## Exempted edits
+
+*(standing heading per `change_rule.md` §5 rule 3 — one line per typo/clarity-exempted edit;
+enumerated at every seal/eval preamble. Currently empty.)*

@@ -1,8 +1,9 @@
-# TEMPLATE — start.md (grammar §4.3 · the operating manual — the crown template)
+# TEMPLATE — start.md (grammar §4.3 · the operating manual)
 
-> Authoring notes in blockquotes; delete them. Calibrate against the exemplars: feedler's start.md
-> (tier S, ~180 lines) and the trading platform's (tier L, ~280 lines + satellite standards). Emission
-> instantiates every <placeholder> concretely — an emitted start.md contains no generic language.
+> Authoring notes in blockquotes; delete them. Size calibration lives with the reference
+> instances in `reference/exemplars.md` — the target is a manual that routes and teaches, not a
+> treatise. Emission instantiates every <placeholder> concretely — an emitted start.md contains
+> no generic language.
 
 # start.md — The <Product> Development Entrypoint
 
@@ -17,14 +18,17 @@ language>` — and you take it from there. This file tells you how.
   better AI from these specs, better each time. Your job is never to preserve code; it is to keep
   the specs true, the implementation conformant, and this manual sharper than you found it.
 - **Specs define WHAT; you decide HOW.** <name this product's binding set: the wire contract, the
-  data model, named config keys, the signature formats, user-relied-on behaviors> are **verbatim
+  data model, named config keys, named output formats, user-relied-on behaviors> are **verbatim
   and binding**. Everything else is yours. The stack named in <engineering standard ref> is binding
   at the category level; swapping it is a spec change.
 - **Omitted WHAT is a defect, equal to transcribed HOW.** If rebuilding from the spec alone would
   lose a feature, surface, interaction, or behavior the product is meant to have, the spec is
   incomplete — fix the spec. Conciseness is never the goal; completeness of the WHAT is.
 - **The change rule** governs every modification: *"If a better AI rebuilt this from the specs
-  alone, would this change be lost?"* — Yes → the spec must change first. No → code-only fix.
+  alone, would this change be lost?"* — Yes → the spec must change **first** (with the operator's
+  confirmation). No → code-only fix.
+- **The operator commits; you never run git mutation** — unless an explicit, gated standard (the
+  develop-loop Gate class) says otherwise. The commit is the operator's countersign on your work.
 - **Never guess; never fail silently.** Ambiguity → ask, or state your assumption explicitly and
   proceed reversibly. Report what failed as failed.
 - **Symptom-first communication.** Describe observed behavior; don't guess root causes into the
@@ -40,7 +44,8 @@ language>` — and you take it from there. This file tells you how.
 
 > **The boot table** — generated from architecture's component table. One row per target; ordered
 > reading lists (contracts before consumers; design spec for UI surfaces; "spec work" row reads
-> vision first). Every spec file must appear in ≥1 row.
+> vision first). Every spec file must appear in ≥1 row — except this file and `specs/README.md`
+> (grammar §6 check 1's exemptions).
 
 | Target | Read |
 |--------|------|
@@ -51,7 +56,8 @@ language>` — and you take it from there. This file tells you how.
 
 3. Read `DRIFT.md` first if present (known divergence is recorded, not re-discovered), then
    inspect `workspace/` (the implementation mirror) for the target and diff it against the spec —
-   that tells you whether you are in case A, B, or C (§3).
+   that tells you whether you are in case A or B (§3); a plain-language change request is case C
+   regardless of the diff.
 4. Route by command (§2). Do not ask questions the specs already answer.
 
 ## 2. Command grammar
@@ -61,12 +67,14 @@ language>` — and you take it from there. This file tells you how.
 - `<a change request in plain language>` — route via the change rule (§3, case C).
 - `edit specs: <request>` — a spec-editing session, no code (§5).
 - `new <component|feature> <name>` — a spec-authoring session (§5; vision first — judge whether it
-  should exist at all; output is a proposed spec for the operator's confirmation).
+  should exist at all; output is a proposed spec for the operator's confirmation, shaped like this
+  repo's existing component specs: scope/not-this-spec header, binding behavior sections with
+  worked examples, invariants, risk, open questions, Acceptance Criteria + Deliverables).
 - `verify <target> [scope]` — independent verification: <per tier — inline fresh-eyes discipline
   (S), or dispatch per `standards/verification_standard.md` (M/L)>.
 > *(dial, optional)* `develop-loop <target>` — the automated Builder/Gate convergence loop
-> (`standards/develop_loop.md`). *(dial L)* `design <target>` — the design studio (`studio.md`).
-> Plus product-lifecycle commands the specs define (e.g. `archive <x>`).
+> (`standards/develop_loop.md`). *(dial L, experience-led)* `design <target>` — the design studio
+> (`studio.md`). Plus product-lifecycle commands the specs define (e.g. `archive <x>`).
 
 ## 3. The three cases
 
@@ -75,23 +83,30 @@ finish at the Definition of Done (§6). The acceptance gate is <the one-command 
 engineering standard> → <what a working product observably does>.
 
 **B. Spec changed** (implementation predates or lags the specs): diff reality against the spec —
-**the spec
-wins**. Produce a reconciliation list, apply it, note which spec change drove what. Items you
-cannot apply in-session land in `DRIFT.md` at the repo root — **a record, not a spec**: non-binding
-(a rebuild builds from `specs/` alone, never from it), dated items under per-component headings,
-each naming the divergence, the owning spec §, and the fix owed; deleted when fixed, the file
-deleted when empty. Create it on first need, opening with:
-`# DRIFT — <product> divergence ledger` and the line "A record, not a spec — the specs win; a
-rebuild builds from `specs/` alone. Items are deleted when fixed; the file is deleted when empty."
+**the spec wins**. Produce a reconciliation list, apply it, note which spec change drove what.
+Items you cannot apply in-session land in `DRIFT.md` at the repo root, whose rules are:
+1. **A record, not a spec** — non-binding; a rebuild builds from `specs/` alone, never from it.
+2. Items are dated, grouped under per-component headings, each naming the divergence, the owning
+   spec §, and the fix owed.
+3. An item is deleted when fixed; the file is deleted when empty — absence asserts conformance.
+4. **Acceptance defers, never dissolves:** a divergence meant to be permanent is a spec change,
+   not a DRIFT item.
+5. Create it on first need, opening with `# DRIFT — <product> divergence ledger` and the line
+   "A record, not a spec — the specs win; a rebuild builds from `specs/` alone. Items are deleted
+   when fixed; the file is deleted when empty."
+
 Never preserve non-conformant behavior because it exists; existing code has no authority.
 > *(dial L)* when the one file strains, split to `drift/<component>.md` with the root file as the
 > index; per-file absence asserts that component's conformance.
 
 **C. Change request:** 1) **Read `vision.md` first** — judge against the WHY and the non-goals.
 2) Classify with the change rule. 3) Anything that changes WHAT → **spec first**, operator
-confirmation, then implement. 4) A request violating a principle or non-goal → stop, say so,
-propose the closest conformant alternative. 5) A request that reshapes the product itself — new
-components, new boundaries, a different decomposition — is beyond this manual's change process:
+confirmation, then implement. 4) A request violating a principle or an **identity** non-goal →
+stop, say so, propose the closest conformant alternative; a request against a **revisitable**
+non-goal (a recorded cut) is not a stop — it routes as a vision edit, operator confirming.
+5) A request that reshapes the product itself — new
+components, a new user class or boundary, a re-tiered dial, a different decomposition — is beyond
+this manual's change process:
 stop and hand it back to the operator for a **delta engagement** with the factory process that
 emitted this repo (or its successor). If no factory is available, the reshape can still be done
 here through `edit specs` and `new <component>` sessions; slower, but this repo is complete on
@@ -104,6 +119,9 @@ its own.
 - **Delegation:** decompose well-bounded pieces and hand each the relevant spec excerpts; keep
   integration and spec-conformance judgment yourself; never relay a sub-result as done unchecked.
 - **The QA layers** (all, every time) — tailored to this product:
+> The four layers below are the default set — rename and extend them to fit this product's
+> acceptance gate; the ladder (build → interaction → data → time) is the constant, the names are
+> not.
   1. **Build & boot:** <the one-command gate> from clean; health truthful.
   2. **Interaction:** drive the real UI/API through the primary flows — <name them, from the
      lifecycle stories> — against the running artifact, not just unit logic.
@@ -113,8 +131,11 @@ its own.
 - **Honesty:** report what failed as failed; an unverified checklist item is unchecked.
 - **Independent verification:** <per tier — (S) for substantial builds or any change to <binding
   set>, verify with fresh eyes: derive expected behavior from the spec first, then drive the
-  running app to refute "done"; (M/L) dispatch per the verification standard; the builder never
-  dispatches their own verifiers. No PASS, no done.> Operator-accepted findings about the
+  running app to refute "done"; money-path changes (products with regulatory/money = 2) always
+  get a genuinely fresh context — a separately dispatched session, not the builder's own fresh
+  eyes; (M/L) dispatch per the verification standard — independence is the
+  channel: a fresh context, the declared spec package, a fixed brief; never the builder's
+  conversation or fix claims. No PASS, no done.> Operator-accepted findings about the
   implementation land in `DRIFT.md` with the acceptance reason and date — acceptance defers a fix,
   never dissolves it.
 
@@ -132,8 +153,8 @@ its own.
   - <design spec> → cascades to visual surfaces only.
 - **Style is binding:** glossary-first; contracts verbatim, implementation descriptive; worked
   examples as binding test cases; behavioral invariants, not bug diaries (known divergences go to
-  `DRIFT.md`, deleted when fixed); every component spec ends
-  with Risk, Acceptance Criteria, and Deliverables; completeness of WHAT is binding too — hunt
+  `DRIFT.md`, deleted when fixed); every component spec carries Risk & failure considerations and
+  ends with Acceptance Criteria + Deliverables; completeness of WHAT is binding too — hunt
   omissions like defects.
 - **Spec edits keep `DRIFT.md` true:** an edit that moves, renames, or deletes a section re-points
   any `DRIFT.md` items citing it and deletes items it moots; an edit that knowingly moves the spec
@@ -146,9 +167,12 @@ its own.
 A `develop` invocation is complete when:
 - the target meets **every** item of its spec's Deliverables checklist and Acceptance Criteria;
 - <the one-command acceptance gate> passes and the QA layers (§4) pass **with evidence shown**;
+- **independent verification, where §4's scope requires it for this target, returned PASS**
+  (no PASS, no done; below §4's threshold, the §4 QA layers with evidence are the bar);
 - no spec was contradicted — or the spec was updated first, with the operator's confirmation;
 - <the product's cross-cutting DoD lines: reconciliation/idempotency proofs, lifecycle stories
-  hold, run manifest for verifiers (M/L)>;
+  hold, and at M/L a **run manifest** for verifiers — what ran, in which versions/config, and how
+  to reproduce it (the verifier's observed-behavior input)>;
 - `DRIFT.md` reflects reality: items this work fixed are deleted; divergences found but not fixed
   are recorded there, dated (the file is deleted when its last item goes);
 - you flagged any **process friction** (spec ambiguity, missing seam, a place you had to guess) and

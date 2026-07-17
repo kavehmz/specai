@@ -1,9 +1,7 @@
 # The Delta Engagement — re-entering a sealed repo for a product-reshaping change
 
 **Status:** Binding. This is the factory-side path for changes too large for an emitted repo's own
-change process; it is that process's biggest case, not a bypass of it. Lineage: ai-it's update
-mode, ported to the factory. *(Designed 2026-07-12; not yet exercised — first exercise expected at
-L4 scale.)*
+change process; it is that process's biggest case, not a bypass of it. (Lineage: `NOTES.md`.)
 
 ## 0. Route check (before anything)
 
@@ -19,45 +17,77 @@ If (2) fails, hand the request back to the emitted repo's `start.md` and stop. C
 
 ## Inputs
 
-The sealed repo **including** its specs, `NOTES.md` (checkpoint answers, founding decisions,
-deliberate cuts — binding context), `DRIFT.md` when present (current known divergence is reshaping
+The sealed repo **including** its specs (`vision.md`'s non-goals and Dial line bind — the
+revisitable cuts live there), `NOTES.md` (checkpoint answers, founding decisions, cut rationale —
+history and context, not binding), `DRIFT.md` when present (current known divergence is reshaping
 context — a landed delta must not silently orphan or duplicate its items), and
-`reference/ideation.md`; the change request verbatim; the
-dial (re-scored only if the change plausibly moves it — an operator gate either way). Unlike eval
-runs, a delta engagement reads the existing tree: it is maintenance, not reproduction.
+`reference/ideation.md`; the change request verbatim — preserved as
+`<run-dir>/change-request.md` (relocating with the verdict records at run-dir deletion —
+`verification_core.md` §6 rule 4; the run dir's location, files, and freshness rule are
+`SKILL.md` §3's); the dial (re-scored only if the change
+plausibly moves it — an operator gate either way, `dial.md` §1). Unlike eval runs, a delta
+engagement reads the existing tree: it is maintenance, not reproduction.
 
 ## Procedure — affected phases only, in update mode
 
-Update-mode discipline throughout (the ai-it inheritance): read what exists first; gap-analyze
+Update-mode discipline throughout: read what exists first; gap-analyze
 against the change; touch only what the change requires; **never regenerate an untouched spec**;
-preserve every conforming decision; honor NOTES' deliberate cuts (a cut is reversed only by the
-operator, explicitly).
+preserve every conforming decision; honor the vision's revisitable cuts (a cut is reversed only by
+the operator, explicitly, as a vision edit — `change_rule.md` §2).
 
-1. **Definition delta.** Judge the request against `vision.md` (non-goals are the firewall — a
-   request that violates one stops here with a conformant alternative). Amend vision if the WHY
-   itself changes (rare, loud). Produce a **delta inventory** (`<run-dir>/inventory-delta.md`):
-   new/changed/retired requirement lines, source-tagged to the request. Checkpoint questions only
-   for what the request leaves open. **Operator gate: always.**
-2. **Architecture delta.** Re-enter `phases/architecture.md` in update mode: glossary additions,
-   data-model changes (with migration implications named loudly), component-map changes, principle
-   changes (top-tier scrutiny), coverage re-check of the delta inventory. Operator gate at M/L.
+1. **Definition delta.** Judge the request against `vision.md` (**identity** non-goals are the
+   firewall — a request violating one stops here with a conformant alternative; a request against
+   a **revisitable** cut routes as an explicit operator-confirmed vision edit — `change_rule.md`
+   §2). Amend vision if the WHY itself changes (rare, loud). Produce a **delta inventory**
+   (`<run-dir>/inventory-delta.md`): new/changed/retired requirement lines, source-tagged to the
+   request. Checkpoint questions only for what the request leaves open. Spot-verify where the
+   schedule fires (`dial.md` §2), in its delta reading (change-request coverage; the delta
+   inventory as the source). **Operator gate**
+   (delta gates mirror the tempo rule, `dial.md` §3: this one always) — approved artifacts
+   copied to `<run-dir>/gates/definition-delta/` (SKILL §3).
+2. **Architecture delta.** Re-enter `phases/architecture.md` in update mode (its spot-verify
+   step included where the schedule fires, with the delta substitutions: the full inventory →
+   `inventory-delta.md` + the delta slices; ideation coverage → change-request coverage; the
+   ideation itself stays — it lives in the sealed repo): glossary additions, data-model changes (with
+   migration implications named loudly), component-map changes, principle changes (top-tier
+   scrutiny), coverage re-check of the delta inventory — assigning its lines to owning components
+   and **writing their delta slice files** (`<run-dir>/slices/<component>.md`, phase-2
+   conventions). Operator gate at M/L — the approved `architecture.md` copied to
+   `<run-dir>/gates/architecture-delta/`.
 3. **Contracts delta.** Consumer-driven walk for new or changed boundaries only
    (`phases/contracts.md` §procedure, scoped to the delta). A sealed contract is presumed to have
    consumers: **every schema change bumps the version and carries a migration note** — the
-   pre-seal no-bump allowance never applies here. Operator gate at L.
+   pre-seal no-bump allowance (`phases/contracts.md` step 4) never applies here. (Where
+   `phases/contracts.md`'s inputs name `slices/product.md`, the delta substitute is the sealed
+   engineering standard.) Operator gate at L — approved standards copied to
+   `<run-dir>/gates/contracts-delta/`.
 4. **Component deltas.** New components: full isolated authoring per `phases/component_specs.md`.
-   Changed components: the same isolation, with the author's closed input list extended by exactly
-   one item — the component's own existing spec — plus the delta inventory slice. Unchanged
-   components are not opened.
+   Changed components: the same isolation, with the author's closed input list changed by one
+   addition (the component's own existing spec) and one substitution (its delta slice replaces
+   its original phase-2 slice). Unchanged components are not opened.
 5. **Emission delta.** Reconcile the operating manual: boot-table rows, cascade graph, README map,
    command grammar if surfaces changed. Reconcile `DRIFT.md` when present (re-point owning-§
    citations the delta moved; delete items it resolved or made moot). Append the engagement to the
    repo's `NOTES.md` (what changed, why, decisions, any reversed cuts with the operator's say-so).
-6. **Delta verification & seal.** Mechanical pass over the whole tree (grammar §6 — cheap, always
-   full). Fresh-context verifiers scoped to the delta plus every document the cascade touched;
-   lenses: change-request coverage (the delta analog of ideation coverage), consistency across the
-   old/new seam, executability of changed paths, buildability spot-walk. Fix loops per
-   `verification_core.md`. **Operator seal, as ever — commit is the countersign.**
+6. **Delta verification & seal — a phase-6 seal in every duty** (`phases/verification.md`'s
+   dispatch authority, verifier counts per `verification_core.md` §4's tier row, the judgment
+   gate, the seal-presentation sweeps, and its fenced Verifier checks all apply; this step adds
+   only the delta specifics). Mechanical pass over the whole tree (grammar §6 — cheap, always
+   full). Fresh-context verifiers with this declared package: **the phase-6 package
+   (`phases/verification.md` — dial §2, specai's NOTES, templates/, tier-L taxonomy and all),
+   with these delta substitutions**: `reference/ideation.md` → `<run-dir>/change-request.md`;
+   the inventory → `<run-dir>/inventory-delta.md` + the delta slices; the consumer ledger →
+   only where step 3 ran; the NOTES seed → the
+   appended repo-NOTES entry; the gate copies → `<run-dir>/gates/*-delta/`; plus the derived
+   cascade set named in the dispatch (derived per `change_rule.md` §3, never asserted). The
+   fenced Verifier checks apply in their delta readings (stated inside the checks). **All
+   applicable `verification_core.md` §5 lenses apply** (the §4 totality rule), scoped to the
+   changed set plus the derived cascade seam — outcomes over new/changed binding examples,
+   adversarial-user over new/changed surfaces — with these delta readings: change-request
+   coverage replaces ideation coverage; consistency runs across the old/new seam; executability
+   over changed paths; buildability as a spot-walk via the repo's own `start.md` boot table.
+   Fix loops per `verification_core.md`.
+   **Operator seal, as ever — commit is the countersign.**
 
 ## Outputs
 

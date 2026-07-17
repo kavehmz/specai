@@ -69,3 +69,58 @@ choices; everything else stays WHAT-only.
 
 None of these changes what specai fundamentally is — D2, D4, D5 close real holes; D1, D3, D6 make
 rules match reality. The session lead's recommendation was yes to all six.
+
+---
+
+## Operator resolutions — 2026-07-17
+
+Decided by the operator (Kaveh) with a fresh-session analysis (independent of the authoring
+sessions and the panel; it concurred with the session lead's direction on all six and adjusted
+four). All six: **yes, in the adjusted form below.** These resolutions are the binding work order
+for the fix loop; each names its fix homes.
+
+**D1 — accepted, keyed to target document, not edit size.** Any `standards/*` edit takes **one**
+fresh verifier before landing. The two self-governing surfaces — `verification_core.md`, and
+`change_rule.md`'s gating sections (§4–5) — take the full panel. Deferral becomes a named path:
+an explicit IOU recorded in NOTES with a payoff anchor ("before the next seal/eval"), never a
+silent skip. The 2026-07-17 panel pays the three outstanding IOUs (founding tree, delta
+engagement, DRIFT). → `change_rule.md` §5.
+
+**D2 — accepted, generalized.** The money/compliance machinery (extra checkpoint round,
+architecture money section, top-tier gating of money-path changes) triggers whenever the
+**regulatory/money dimension scores 2, regardless of tier**. The mid-run re-score is generic:
+a phase that discovers scope changing **any** dial dimension routes back to a re-score with an
+operator confirm — money is the loud case, not a special mechanism. → `dial.md`, `grammar.md` §5,
+phase files.
+
+**D3 — accepted, with the no-discretion clause.** Independence is a property of the channel:
+fresh context + the phase file's declared input package + the templated lens brief. The run lead
+may dispatch mechanically with **zero discretion** — brief and package fixed by the standards, the
+verdict record names the dispatcher and the package, any deviation disclosed in the verdict. The
+operator personally dispatches only the phase-6 seal review and any review of specai itself.
+→ `verification_core.md` §2 rule 4 (+ B3's curator assignment).
+
+**D4 — accepted, homes named.** The dial score + tier become a **binding line in `vision.md`**;
+per-dimension justifications stay in NOTES. Non-goals split into two marked classes: **identity
+non-goals** (the firewall — router stops) and **revisitable cuts** (v1 scope — a request against
+one routes as a normal vision-level change). NOTES keeps rationale only; nothing binding remains
+there. → `templates/vision.md`, `grammar.md` §4.9, `templates/notes.md`, `change_rule.md` §2
+row 1, `phases/delta.md`.
+
+**D5 — accepted, exclusion scoped to the target.** During an eval the **target** exemplar's repo
+is off-limits to the run (the other exemplar stays readable, as in any real run — an eval remains
+"a normal run plus a comparison verdict"). The comparison panel is dispatched by the operator,
+never the run. No PASS until the integration proof (build from the emitted tree via its own
+start.md) runs. The L1 stamp is relabeled: *comparison passed 2026-07-11; build-proof pending;
+run pre-dates eval hygiene — the target exemplar was readable and the comparison was
+self-dispatched.* Consequence: the panel's D-ext finding (grammar/templates self-sufficient
+without exemplars) is load-bearing for evals, not hygiene. → `reference/exemplars.md` §3,
+`templates/component_spec.md`, `SKILL.md` §4 (with A3's neutral-directory rule).
+
+**D6 — accepted, scoped by citation.** `style.md` §1's licensed-HOW exception is reworded to cite
+its boundary: the engineering standard binds exactly the HOW-level surfaces its template sections
+define (stack categories, deployment shape, configuration contract, persistence rules,
+build/acceptance commands); changing any of them is a spec change; every other document stays
+WHAT-only. Not an open-ended license. → `style.md` §1 (cites `grammar.md` §4.7).
+
+Countersign: the operator's commit of this record.

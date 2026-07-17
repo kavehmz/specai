@@ -1,8 +1,12 @@
 # TEMPLATE — components/<name>_spec.md (grammar §4.5 · style.md applies)
 
-> Authoring notes in blockquotes; delete them. Reference instance: feedler's `export_spec.md` —
-> read it once before authoring your first component spec (`reference/exemplars.md`).
-> The design spec uses this same shape with the intent-vs-binding split (grammar §4.6).
+> Authoring notes in blockquotes; delete them. Reference instance for the **run lead's**
+> calibration only: the tier-S exemplar's strongest component spec (named in
+> `reference/exemplars.md` §1) — it is NOT part of a phase-4 author's closed input list. Authors
+> work from this template and their declared inputs alone.
+> The design spec uses this same shape with the intent-vs-binding split: **appearance (the
+> current visual identity) is replaceable intent; layout shape, theming behavior, interaction
+> patterns, and the accessibility floor are binding behavior** (grammar §4.6 is the provenance).
 
 # <Product> — <Component> — <one-line scope: the surfaces/behaviors this spec owns>
 
@@ -35,7 +39,8 @@ restated here.">
 
 ## n+1. Behavioral invariants
 > Numbered rules the component must uphold across all states — the always-true sentences a
-> verifier can attack ("preview == output", "generating an export mutates nothing").
+> verifier can attack (invented examples: "the draft view equals the published output",
+> "reading a report mutates nothing").
 
 ## n+2. Risk & failure considerations
 > Component-local risks: untrusted input on this path, degradation choices (what fails soft and

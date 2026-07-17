@@ -1,8 +1,9 @@
 # TEMPLATE — standards/engineering_standard.md (grammar §4.7 · the chosen HOW-level)
 
-> Authoring notes in blockquotes; delete them. Reference instance: feedler's
-> `engineering_standard.md`. Tier S with a tiny surface MAY inline this as `architecture.md` §7;
-> everything below still applies, just relocated.
+> Authoring notes in blockquotes; delete them. Reference instance: the tier-S exemplar's
+> engineering standard (`reference/exemplars.md`). Tier S with a small surface MAY inline this as
+> `architecture.md` §7; everything below still applies, just relocated. **This template owns the
+> licensed-HOW section enumeration** (`grammar.md` §4.7 and `style.md` §1 defer to it).
 
 # <Product> — Engineering Standard
 

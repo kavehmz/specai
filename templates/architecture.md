@@ -12,8 +12,8 @@
 
 ## 1. The system in one picture
 > An ASCII diagram a builder can hold in their head: the deployable(s), the client(s), the
-> datastore(s), every network egress/ingress. Close with the counting sentence — "One process. One
-> port. One file." class — and what there is exactly none of.
+> datastore(s), every network egress/ingress. Close with the counting sentence (an invented
+> example: "One process. One port. One file.") — and what there is exactly none of.
 
 ## 2. Glossary (canonical terms — used verbatim across all specs)
 > A table: Term → Meaning (with identity rules and cross-refs to owning specs). This is the
@@ -46,9 +46,17 @@
 > suite yields the same system). Cite the owning component spec at the end of each story.
 
 ## 7. Engineering standards
-> Tier S with a small surface: the stack, build, config, and security posture inline here.
-> Otherwise: one line citing `standards/engineering_standard.md`.
+> Tier S with a small surface MAY carry the engineering standard inline here — **every section of
+> `templates/engineering_standard.md` still applies, just relocated** (that template owns the
+> enumeration). Otherwise: one line citing `standards/engineering_standard.md`. Written by
+> phase 3 either way.
+
+## 7b. Money & compliance *(only when regulatory/money scores 2 — `dial.md` §1)*
+> The money flows and custody/settlement rules; every REG-line of the regulatory register mapped
+> to its enforcing component or principle; the audit surfaces (what is inspectable, what is
+> queryable, what is immutable). Money-path changes gate at top tier — say so here.
 
 ## 8. What this architecture deliberately does not have
-> Bulleted negatives with teeth: no second datastore, no auth layer, no telemetry, no separately
-> deployed frontend… Each traces to a vision non-goal or a principle. As binding as the scope.
+> Bulleted negatives with teeth (invented examples: no second datastore, no telemetry, no
+> separately deployed frontend). Each traces to a vision non-goal or a principle. As binding as
+> the scope.

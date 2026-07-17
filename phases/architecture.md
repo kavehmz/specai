@@ -23,28 +23,45 @@ component authors will see only what this document and the contracts expose.
    binding invariants** (identity → dedup/idempotency; cascade rules; timezone/units law; ordering).
    Invariants are where inventory edge-cases become architecture.
 3. **Decompose into components** by information boundary: a component owns a coherent slice of
-   state + behavior and interacts with siblings only through contracts. Right-size to the dial —
-   feedler is one deployable with seven *spec areas*; the trading platform is eight platform components plus
-   products. Components ≠ deployables; the engineering standard decides deployment shape.
+   state + behavior and interacts with siblings only through contracts. Right-size the component
+   count to the dial (scored decomposition instances: `reference/exemplars.md` — cited, never
+   carried here). Components ≠ deployables; the engineering standard decides deployment shape.
 4. **Assign every inventory line** (R/S/U/C/X) to exactly one owning component (or to a standard /
    vision non-goal). Unassignable lines mean the decomposition is wrong — iterate. This assignment
    IS the coverage matrix (explicit table at M/L; the component table's "owns" column at S).
+   **Write the slice files**: `<run-dir>/slices/<component>.md` (each component's assigned lines,
+   verbatim), `<run-dir>/slices/product.md` (operator engineering defaults + cross-cutting
+   C-lines no single component owns), and for UI products `<run-dir>/slices/design.md` (the
+   U-lines + the S-lines that touch a UI surface, verbatim — the design author's slice) —
+   phases 3–4 hand these paths to isolated contexts.
 5. **Derive the principles**: from vision pillars (each load-bearing belief gets its enforcing
    principle), from invariant-class C-lines, and from the universal set that has earned its place —
    WHAT/HOW (always); identity→idempotency and untrusted-input rules (when state/input exists);
-   one-command bring-up (when deployable); plus the product's own (feedler's "politeness to
-   origins"; the trading platform's "products never call the platform back"). Number them; each is a rejection rule, not
-   a vibe.
+   one-command bring-up (when deployable); plus the product's own domain principles (every real
+   product grows one or two — calibration instances in `reference/exemplars.md`). Number them;
+   each is a rejection rule, not a vibe.
 6. **Write the lifecycle stories**: the absorbed user stories, condensed into acceptance
    narratives — first run, each primary flow, failure/recovery, reset/retirement. Every S-line must
    be recognizable inside one story or a component's behavior obligations.
 7. **"What this architecture deliberately does not have"**: promote the X-lines and the
-   architectural negatives (no second datastore, no auth layer, …). As binding as the scope.
-8. Engineering standards: inline a §6 at tier S if it fits; otherwise leave the section citing
-   `standards/engineering_standard.md` for phase 4/5 to fill.
-9. **Self-review**, then per the dial's tempo: fresh spot-verify (M/L) — lenses: consistency
-   (glossary/inventory), altitude, and the coverage check.
+   architectural negatives (invented examples: no second datastore, no telemetry). As binding as
+   the scope.
+8. **Money & compliance section** (only when regulatory/money scores 2 — `dial.md` §1,
+   `grammar.md` §4.2): money flows and custody/settlement rules; every REG-line of the register
+   mapped to its enforcing component or principle; the audit surfaces.
+9. Engineering standards: **phase 3 writes the engineering standard in every case** — as
+   `standards/engineering_standard.md`, or at tier S with a small surface delivered as this
+   document's engineering-standards section (template §7). This phase leaves the section as a
+   one-line placeholder; phase 3 sets the final citation when it writes the standard (the testing
+   floor completes at phase 5 — `phases/emission.md` output 7).
+10. **Self-review**, then per the spot-verify schedule (`dial.md` §2): fresh spot-verify —
+   lenses: consistency/contract (glossary/inventory), altitude/style, and ideation coverage.
+   The spot-verify package is this phase's input list **plus `reference/ideation.md` and the
+   full inventory** (a verifier-only addition, declared here — the coverage lens needs the
+   source; the author ban on the raw ideation stands).
 
 ## Gate
-Tier M/L: operator approves the component map + principles before contracts begin (tempo rule).
-Tier S: proceed; the operator sees architecture at the seal.
+Per the tempo rule (`dial.md` §3 — cited, not restated): where the gate fires, the operator
+approves the component map + principles before contracts begin; approval is recorded in the
+NOTES seed and the approved `architecture.md` is copied to `<run-dir>/gates/architecture/`.
+Otherwise proceed; the operator sees architecture at the seal.

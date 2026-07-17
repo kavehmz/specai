@@ -1,7 +1,7 @@
 # TEMPLATE — standards/<contract>.md (grammar §4.4 · the hardened waist)
 
-> Authoring notes in blockquotes; delete them. Reference instances: feedler's `api_contract.md`
-> (tier S, one seam) and the trading platform's versioned platform contract (tier L).
+> Authoring notes in blockquotes; delete them. Reference instances: the tier-S and tier-L
+> exemplars' contracts (`reference/exemplars.md`).
 > Born in phase 3 from accumulated consumer demands; hardened here into verbatim wire truth.
 
 # <Product> — <Contract Name>
@@ -9,7 +9,8 @@
 **Version:** 1.0 · **Status:** Binding wire truth. Both sides implement this document; nothing
 else couples them.
 **Versioning law:** any change to a shape, endpoint, parameter, or status code in this document
-requires a **version bump and a migration note added at the top of this file**. Announce such
+requires a **version bump and a migration note added at the top of this file** (before the repo's
+first seal, drafts iterate freely at 1.0 — there are no consumers yet). Announce such
 changes loudly (start.md §5).
 > *(dial M/L)*: version-negotiation window, conformance-suite hook.
 
@@ -30,7 +31,7 @@ changes loudly (start.md §5).
 > binding**) · request/response shapes (cite §1 objects; show deltas only) · status codes ·
 > one worked example where the shape is nontrivial (binding).
 > *(from phase 3, optional but recommended)*: a **Consumers** note per endpoint — who demanded it
-> and why — kept from the consumer ledger; invaluable when a future change asks "who breaks?".
+> and why — kept from the consumer ledger; it answers "who breaks?" when a future change comes.
 
-## n+1. Consumers appendix *(optional, from the consumer ledger)*
+## n+1. Consumers appendix *(mandatory at tier M/L; recommended at S — from the consumer ledger)*
 > Consumer → the surfaces it depends on → purpose. The future cascade map for this contract.
