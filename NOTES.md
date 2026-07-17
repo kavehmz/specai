@@ -465,6 +465,21 @@ the emitted repo before L4 → speclint.py (emitted + factory modes; recover the
 script if present). The batching question (one landing = one panel) is put to that panel's
 brief. Operator countersign of this entry = the commit.
 
+## 2026-07-17 — Second external note verified; seed regeneration accepted and completed
+
+Kimi's follow-up (`kimik3_notes2.md`) conceded both corrections from this session's triage,
+committed the triage set as `a77d382` at the operator's instruction, and regenerated
+`taxonomy-seed.md` — correctly: the first seed's patterns were paraphrased against §2 rule 1's
+verbatim letter, and **four source records were mis-cited** (three r3-lens2 findings filed under
+r2, one r4-lens2 finding under r3) — the exact lead-curated-artifact class the rules exist to
+prevent, caught by exactly the review symmetry that caught Kimi's errors. This session
+**independently re-verified** the regeneration (own script, same method): 113/113 verbatim; then
+completed the two disclosed coverage gaps (+2 lines — completing the transform over closed majors
+is zero-discretion) and re-verified: **115/115**. Adopted into the speclint work order: factory
+mode gains a permanent **seed verbatim-guard** (normalize whitespace/emphasis, substring-check
+every pattern against its cited record — the 20-line check that just caught a real defect class).
+Operator countersign of the regenerated + completed seed = the commit.
+
 ## Exempted edits
 - 2026-07-17 · NOTES.md + 5 verdicts/ records · orphaned seal SHA corrected (record fix, ungated
   by nature; logged here for the one-reader guarantee).
