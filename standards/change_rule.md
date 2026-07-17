@@ -12,8 +12,12 @@ This one test replaces ai-it's bug-vs-modification taxonomy: a defect the spec a
 correct behavior for is a code fix; anything that changes WHAT — a contract, a data model, a
 user-relied-on behavior, a config key — is a spec change and lands in the spec before any
 implementation moves. It also replaces the directive/preferences system: **a decision that must
-survive regeneration lives in a spec; NOTES.md keeps the history and rationale; nothing else is a
-truth store.**
+survive regeneration lives in a spec; `NOTES.md` keeps history and rationale; `DRIFT.md` keeps
+current divergence (`grammar.md` §4.10); nothing else stores truth.**
+
+A code-only fix that cannot land in the same session is parked in the repo's `DRIFT.md`
+(`grammar.md` §4.10) — non-binding, dated, deleted when fixed — never written into a spec and never
+left only in conversation.
 
 ## 2. The router — one front door
 

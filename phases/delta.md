@@ -20,7 +20,9 @@ If (2) fails, hand the request back to the emitted repo's `start.md` and stop. C
 ## Inputs
 
 The sealed repo **including** its specs, `NOTES.md` (checkpoint answers, founding decisions,
-deliberate cuts — binding context), and `reference/ideation.md`; the change request verbatim; the
+deliberate cuts — binding context), `DRIFT.md` when present (current known divergence is reshaping
+context — a landed delta must not silently orphan or duplicate its items), and
+`reference/ideation.md`; the change request verbatim; the
 dial (re-scored only if the change plausibly moves it — an operator gate either way). Unlike eval
 runs, a delta engagement reads the existing tree: it is maintenance, not reproduction.
 
@@ -48,8 +50,9 @@ operator, explicitly).
    one item — the component's own existing spec — plus the delta inventory slice. Unchanged
    components are not opened.
 5. **Emission delta.** Reconcile the operating manual: boot-table rows, cascade graph, README map,
-   command grammar if surfaces changed. Append the engagement to the repo's `NOTES.md` (what
-   changed, why, decisions, any reversed cuts with the operator's say-so).
+   command grammar if surfaces changed. Reconcile `DRIFT.md` when present (re-point owning-§
+   citations the delta moved; delete items it resolved or made moot). Append the engagement to the
+   repo's `NOTES.md` (what changed, why, decisions, any reversed cuts with the operator's say-so).
 6. **Delta verification & seal.** Mechanical pass over the whole tree (grammar §6 — cheap, always
    full). Fresh-context verifiers scoped to the delta plus every document the cascade touched;
    lenses: change-request coverage (the delta analog of ideation coverage), consistency across the
@@ -58,6 +61,7 @@ operator, explicitly).
 
 ## Outputs
 
-The updated sealed repo (specs + manual + NOTES), the delta inventory and verdicts in
+The updated sealed repo (specs + manual + NOTES + a reconciled `DRIFT.md` when present), the delta
+inventory and verdicts in
 `<run-dir>/`, and version-bumped contracts with migration notes. Code is untouched — the emitted
 repo's own `develop` (case B: spec changed, spec wins) reconciles implementations afterward.

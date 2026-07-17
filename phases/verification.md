@@ -12,7 +12,7 @@ the emitted-repo target.
 Run the `grammar.md` §6 checklist literally: required files, boot-table completeness both
 directions, citation resolution, glossary discipline, Acceptance+Deliverables endings, contract
 Version headers, requirement-language declaration, binding worked examples present, ideation
-preserved, NOTES seeded. Fix mechanically; these findings never reach the judgment pass.
+preserved, NOTES seeded, no `DRIFT.md` at a first seal (conforming at a delta re-seal). Fix mechanically; these findings never reach the judgment pass.
 *(Automation: a speclint-class script is the intended form — `NOTES.md` tracks it as deferred
 tooling; until it exists, the checklist is run by hand.)*
 

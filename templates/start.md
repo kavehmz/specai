@@ -49,7 +49,8 @@ language>` — and you take it from there. This file tells you how.
 | … | … |
 | spec work (`edit specs` / `new …`) | `vision.md` first, then the affected specs and §5 of this file |
 
-3. Inspect `workspace/` (the implementation mirror) for the target and diff it against the spec —
+3. Read `DRIFT.md` first if present (known divergence is recorded, not re-discovered), then
+   inspect `workspace/` (the implementation mirror) for the target and diff it against the spec —
    that tells you whether you are in case A, B, or C (§3).
 4. Route by command (§2). Do not ask questions the specs already answer.
 
@@ -73,9 +74,18 @@ language>` — and you take it from there. This file tells you how.
 finish at the Definition of Done (§6). The acceptance gate is <the one-command gate from the
 engineering standard> → <what a working product observably does>.
 
-**B. Spec changed** (implementation predates the specs): diff reality against the spec — **the spec
-wins**. Produce a reconciliation list, apply it, note which spec change drove what. Never preserve
-non-conformant behavior because it exists; existing code has no authority.
+**B. Spec changed** (implementation predates or lags the specs): diff reality against the spec —
+**the spec
+wins**. Produce a reconciliation list, apply it, note which spec change drove what. Items you
+cannot apply in-session land in `DRIFT.md` at the repo root — **a record, not a spec**: non-binding
+(a rebuild builds from `specs/` alone, never from it), dated items under per-component headings,
+each naming the divergence, the owning spec §, and the fix owed; deleted when fixed, the file
+deleted when empty. Create it on first need, opening with:
+`# DRIFT — <product> divergence ledger` and the line "A record, not a spec — the specs win; a
+rebuild builds from `specs/` alone. Items are deleted when fixed; the file is deleted when empty."
+Never preserve non-conformant behavior because it exists; existing code has no authority.
+> *(dial L)* when the one file strains, split to `drift/<component>.md` with the root file as the
+> index; per-file absence asserts that component's conformance.
 
 **C. Change request:** 1) **Read `vision.md` first** — judge against the WHY and the non-goals.
 2) Classify with the change rule. 3) Anything that changes WHAT → **spec first**, operator
@@ -104,7 +114,9 @@ its own.
 - **Independent verification:** <per tier — (S) for substantial builds or any change to <binding
   set>, verify with fresh eyes: derive expected behavior from the spec first, then drive the
   running app to refute "done"; (M/L) dispatch per the verification standard; the builder never
-  dispatches their own verifiers. No PASS, no done.>
+  dispatches their own verifiers. No PASS, no done.> Operator-accepted findings about the
+  implementation land in `DRIFT.md` with the acceptance reason and date — acceptance defers a fix,
+  never dissolves it.
 
 ## 5. Spec editing rules
 
@@ -119,9 +131,14 @@ its own.
     contract surface → the standard).
   - <design spec> → cascades to visual surfaces only.
 - **Style is binding:** glossary-first; contracts verbatim, implementation descriptive; worked
-  examples as binding test cases; behavioral invariants, not bug diaries; every component spec ends
+  examples as binding test cases; behavioral invariants, not bug diaries (known divergences go to
+  `DRIFT.md`, deleted when fixed); every component spec ends
   with Risk, Acceptance Criteria, and Deliverables; completeness of WHAT is binding too — hunt
   omissions like defects.
+- **Spec edits keep `DRIFT.md` true:** an edit that moves, renames, or deletes a section re-points
+  any `DRIFT.md` items citing it and deletes items it moots; an edit that knowingly moves the spec
+  ahead of the implementation records that divergence in `DRIFT.md` before the session ends
+  (spec-first changes are drift until a `develop` reconciles the code).
 - **Verification of spec changes:** <per tier: which edits need which depth before landing>.
 
 ## 6. Definition of Done
@@ -132,6 +149,8 @@ A `develop` invocation is complete when:
 - no spec was contradicted — or the spec was updated first, with the operator's confirmation;
 - <the product's cross-cutting DoD lines: reconciliation/idempotency proofs, lifecycle stories
   hold, run manifest for verifiers (M/L)>;
+- `DRIFT.md` reflects reality: items this work fixed are deleted; divergences found but not fixed
+  are recorded there, dated (the file is deleted when its last item goes);
 - you flagged any **process friction** (spec ambiguity, missing seam, a place you had to guess) and
   proposed a concrete improvement to the relevant spec or to this file — the improvement loop is
   part of the job.

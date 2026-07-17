@@ -81,7 +81,12 @@ Finding shape (binding): `{where, severity: blocker|major|minor, issue, evidence
 **Blocker** = would produce a wrong or contradictory product · **major** = will cause drift or
 rework · **minor** = polish. **PASS requires zero open blockers and zero open majors** — each fixed
 (confirmed by a fresh re-run of the lens that caught it) or explicitly accepted by the operator with
-a recorded reason. Minors may ride, listed. At tier M/L the verdict is written as a record
+a recorded reason. Minors may ride, listed — where they land depends on the target: at a spec-tree
+seal they fold into the emitted `NOTES.md` open topics; on a **built** product, findings that name
+a spec divergence — including operator-accepted ones, carrying the acceptance reason and date —
+land in `DRIFT.md` (`grammar.md` §4.10; an emitted repo's own instantiated standard cites its
+`start.md` §3 definition instead, never this grammar), while §-less polish minors fold into
+`NOTES.md` open topics. At tier M/L the verdict is written as a record
 (`verdict-<target>-<date>.md` in the factory run's working dir; the emitted repo's future verdicts
 follow its own standard) — findings, resolutions, the final PASS/FAIL, the dispatcher.
 

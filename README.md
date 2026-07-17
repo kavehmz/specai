@@ -60,3 +60,7 @@ process standards, making the repo self-operable; verification seals it with a m
 pass, fresh-context lens verifiers (ideation coverage and buildability above all), and the
 operator's countersign. After the seal, specai steps aside: the repo's own `start.md` owns
 building, verifying, and change — forever.
+
+An emitted repo keeps three tenses apart: `specs/` say what is **true**, `NOTES.md` records **why**
+decisions were made, and `DRIFT.md` — appearing only once an implementation diverges — tracks where
+reality has **not caught up**, item-by-item, deleted as fixed (`standards/grammar.md` §4.10).

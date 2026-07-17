@@ -160,3 +160,51 @@ recognizes reshape-scale requests, stops, and returns them to the operator for a
 dependency — absent any factory, the repo can still reshape itself via its own `edit specs` /
 `new component` sessions). feedler, emitted before this clause existed, can adopt it through its
 own change process.
+
+## 2026-07-17 — The divergence ledger (DRIFT.md) joins the grammar
+
+**Gap, exposed by a week of operating a production spec-first monorepo** (the operator's CS-AI
+platform, which practices this doctrine at team scale): the factory had no home for
+**code-vs-spec divergence as durable state**. `style.md` banned bug diaries from specs (correctly)
+but named no destination; `start.md` case B's reconciliation list was session-scoped; NOTES is
+append-only history. In live team use divergence is persistent state — dev-owed fixes, cross-team
+decisions pending, verification findings accepted with reason — and conversation history is not a
+truth store. That production repo's per-service `DRIFT.md` convention ("SPEC says what *should*
+be; DRIFT says what currently *isn't*") is the direct source.
+
+**Decision:** emitted repos gain `DRIFT.md`, the divergence ledger — a record, not a spec:
+non-binding, dated, grouped per component, each item naming the divergence + owning spec § + fix
+owed; **deleted item-by-item when fixed, deleted entirely when empty** (absence asserts
+conformance); **never built from by a rebuild**. Dial-sized like everything else: one root file at S/M
+(per-component headings), may split per component at L when the one file strains (length, edit
+contention, ownership). Never emitted at seal — no code exists; born at the first divergence a
+session cannot resolve. Three tenses: specs = what is true · NOTES = why decided · DRIFT = where
+reality lags.
+
+**Homes:** `grammar.md` §2 layout / new §4.10 / §4.3 summary / §5 dial row / §6 check 7 ·
+`change_rule.md` §1 · `style.md` §2 rules 4 + 7 · `verification_core.md` §6 ·
+`templates/start.md` §1.3, §3B, §4, §5, §6 · `templates/notes.md` header · `phases/delta.md`
+inputs, step 5, outputs · `phases/emission.md` outputs note · `phases/verification.md` pass-1
+paraphrase · README (three-tenses line). No files added to the skill itself → `SKILL.md` map
+unchanged.
+
+**Decision added in review (was a gap):** a spec change awaiting implementation **is** drift — an
+`edit specs` session that knowingly moves the spec ahead of the code records the divergence in
+`DRIFT.md` before it ends; spec edits also re-point/moot DRIFT items whose owning §s they move
+(the in-repo mirror of the delta engagement's step-5 duty).
+
+**Verification status:** two same-day fresh-context review rounds ran pre-commit, both dispatched
+by the author — self-QA per `verification_core.md` §2 rule 4, **not** the gate. Round 1 (one
+verifier, all lenses): FAIL — 2 majors (the §6 seal check contradicted delta re-seals; emitted
+repos, which never receive `grammar.md`, weren't handed DRIFT's full shape/non-binding status) +
+9 minors; fixes applied. Round 2 (two fresh verifiers, split lenses, blind to round 1 per §3):
+FAIL — 2 new majors (verification_core §6's built-product routing was incompatible with §4.10's
+owning-§ item shape for §-less polish minors; the emitted repo's everyday `edit specs` path had no
+DRIFT re-pointing duty, only the rare delta path did) + minors and the spec-ahead-of-code gap
+above; fixes applied. **Round-2 fixes are themselves unconfirmed by a fresh re-run** (§3's own
+rule); the pending independent top-tier verification is the confirming gate — it rides the
+founding tree's pending panel review alongside the delta engagement. Round-2 judgment note for the
+operator: this is the third consecutive standards change to defer the pre-landing gate to the
+panel review — either exercise the panel or amend `change_rule.md` §5 to name the deferral path.
+feedler, sealed before this existed, can adopt it through its own change process. Operator
+countersign = Kaveh's commit of this change.

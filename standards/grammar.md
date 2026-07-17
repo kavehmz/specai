@@ -37,7 +37,9 @@ specai's job ends when this repo is sealed (verified + operator countersign). `d
 │   └── README.md               ← workspace conventions (mirror rule, ports, harness) — seeded at emission
 ├── reference/
 │   └── ideation.md             ← the founding human ideation, preserved verbatim (non-normative)
-└── NOTES.md                    ← the decision ledger: founding decisions, dial score, session history (§4.9)
+├── NOTES.md                    ← the decision ledger: founding decisions, dial score, session history (§4.9)
+└── DRIFT.md                    ← the divergence ledger: where the implementation currently departs
+                                  from specs/ (§4.10) — absent until code exists and diverges
 ```
 
 Naming bends with the dial (§5): a tier-L product family may use `products/` beside `platform/`
@@ -96,14 +98,16 @@ WHAT are defects; the change rule verbatim; never guess / never fail silently; s
 **§1 Boot sequence** with the **boot table** (target → ordered reading list) ·
 **§2 Command grammar** (`develop <target>`, plain-language change requests, `edit specs:`,
 `new <component>`, `verify <target>`; dial adds `design`, `develop-loop`, `archive`) ·
-**§3 The three cases** (A fresh build · B spec changed, spec wins, reconciliation list · C change
+**§3 The three cases** (A fresh build · B spec changed, spec wins, reconciliation list —
+unapplied reconciliation items parked in `DRIFT.md` (§4.10) · C change
 request: vision-first → change rule → spec-first → conformant-alternative on principle violation) ·
 **§4 Working discipline** (journaling, delegation with bounded excerpts, the QA layers tailored to
 the product's acceptance gate, honesty rule, independent verification) ·
 **§5 Spec editing rules** (vision-first; propose-before-edit; the **cascade graph** for this repo;
 the binding style list; contract changes need version bump + migration note, said loudly) ·
 **§6 Definition of Done** (checklist; always includes: every Deliverables item met, the acceptance
-gate green, evidence shown, no spec contradicted or spec-first honored, and **process friction
+gate green, evidence shown, no spec contradicted or spec-first honored, `DRIFT.md` reflecting
+reality, and **process friction
 flagged with proposed improvements to this manual** — the self-improvement loop).
 
 ### 4.4 `standards/` — contract standards (the hardened waist)
@@ -149,6 +153,23 @@ rebuild doesn't "restore" them as omitted-WHAT defects), open topics. Appended p
 Durable decisions that must survive regeneration belong in specs (the change rule); NOTES is history
 and context.
 
+### 4.10 `DRIFT.md` — the divergence ledger
+A **record, not a spec** — the current-state complement to NOTES' history: a non-binding, dated
+ledger of where the implementation currently departs from `specs/`. It holds known code defects the
+specs already imply the answer to, reconciliation items a session could not finish, and
+verification findings accepted with a recorded reason — each item dated, grouped under a
+per-component heading, naming the divergence, the owning spec §, and the fix owed. **A rebuild
+builds from `specs/` alone — this file is never an input to what gets built** (it may be read as
+context; a regeneration deletes the items it superseded). That is its purpose: specs stay clean of
+bug diaries (`style.md` §2 rule 4) without the knowledge living only in conversation. Acceptance
+defers a fix, never dissolves it — a divergence meant to be permanent is a spec change, not a DRIFT
+item. It is never emitted: the file appears the first time an implementation diverges and the fix
+cannot land in-session; an item is **deleted when fixed**; the file is deleted when empty — its
+absence asserts conformance. A spec change awaiting implementation **is** drift: an `edit specs`
+session that knowingly moves the spec ahead of the code records the divergence here before it ends
+(the repo's develop, case B, clears it). Three tenses, one rule: specs say what is true, `NOTES.md`
+says why decisions were made, `DRIFT.md` says where reality has not caught up.
+
 ## 5. How the dial bends the grammar
 
 Tier per `standards/dial.md`. Higher tiers add; they never remove.
@@ -163,6 +184,7 @@ Tier per `standards/dial.md`. Higher tiers add; they never remove.
 | Design | `design/design_spec.md` if UI | same | + design-studio track (`studio.md`), storyboards |
 | Coverage | component table + phase-6 traceability check | + explicit coverage matrix in architecture | + matrices and comms matrix, maintained |
 | Stable requirement IDs | no (named sections suffice) | optional | yes, if the tree is large enough that citations strain |
+| Divergence ledger | one root `DRIFT.md`, per-component headings | same | may split per component when the one file strains (length, edit contention, ownership): split files at `drift/<component>.md`, the root file becomes the index (deleted when the last split file goes); per-file absence asserts that component's conformance |
 | Agent operations | no | no | agent standards when the product is AI-operated |
 
 ## 6. Mechanical conformance (the speclint class)
@@ -180,4 +202,8 @@ Phase-6 verification checks these mechanically before any judgment lens runs:
    declared in `architecture.md`.
 6. Worked examples labeled **binding** exist for every transformation the specs define with a right
    answer.
-7. `reference/ideation.md` present; `NOTES.md` seeded with dial score and founding decisions.
+7. `reference/ideation.md` present; `NOTES.md` seeded with dial score and founding decisions. At a
+   **first** seal, no `DRIFT.md` (nothing has been built yet — §4.10); at a delta re-seal a present
+   `DRIFT.md` conforms to §4.10 (or, at tier L, to §5's split form). (`DRIFT.md` is outside checks
+   1–2's required set, and references to it are conditional — they resolve vacuously while the
+   file is legitimately absent.)

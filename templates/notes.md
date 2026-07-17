@@ -7,7 +7,9 @@
 
 The operator's record of what was decided, where it landed, and what's still open. This file is a
 **record, not a spec** — nothing here is normative; the specs win. A decision that must survive
-regeneration lives in a spec (the change rule); this file keeps the history and the why.
+regeneration lives in a spec (the change rule); this file keeps the history and the why. Where the
+*implementation* currently departs from the specs is not history — that lives in `DRIFT.md`
+(`start.md` §3), deleted item-by-item as fixed.
 
 ## Founding (specai run, <date>)
 

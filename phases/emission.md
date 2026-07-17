@@ -36,6 +36,10 @@ remaining job is the seal.
    doesn't "restore" them as omitted-WHAT), open topics.
 6. `reference/ideation.md` confirmed in place (phase 1 put it there).
 
+No `DRIFT.md` is emitted — the divergence ledger (`grammar.md` §4.10) appears only once an
+implementation exists and diverges; the instantiated `start.md` (§1 boot, §3 case B, §4
+verification, §5 spec-editing, §6 DoD) carries its discipline.
+
 ## Procedure
 1. Generate the boot table from the component map; walk every command through it as a dry run —
    each command must resolve to a readable, ordered, *sufficient* list (the future builder's first
