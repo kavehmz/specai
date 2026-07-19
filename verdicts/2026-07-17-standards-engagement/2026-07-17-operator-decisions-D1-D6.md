@@ -2,7 +2,8 @@
 
 Six design decisions the panel surfaced that belong to the operator, in plain language.
 Each is: *the problem found → what is proposed → what it means for you.* The full findings
-behind them are in `verdicts/2026-07-17-standards-panel.md`. Decide each (yes / no / adjust),
+behind them are in `verdicts/2026-07-17-standards-engagement/2026-07-17-standards-panel.md`.
+Decide each (yes / no / adjust),
 then run the fix loop.
 
 ---

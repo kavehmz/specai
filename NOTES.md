@@ -224,7 +224,7 @@ fresh-context verifiers, distinct lenses (consistency/contract · executability 
 judgment+adversarial), blind to the authoring sessions and to each other.
 
 **Verdict: FAIL on all four lenses — zero blockers, ~24 deduped majors, ~23 minors.** The full
-record: `verdicts/2026-07-17-standards-panel.md`. The majors cluster: the practice not binding
+record: `verdicts/2026-07-17-standards-engagement/2026-07-17-standards-panel.md`. The majors cluster: the practice not binding
 itself (dispatch legitimacy, the §5 gate, degraded-disclosure durability, harness contamination,
 the eval protocol); founding consistency debts (engineering-standard ownership, seal/tempo term
 overloads, verdict-record tier contradiction, unnamed working files, map rot, private-exemplar
@@ -233,7 +233,7 @@ dial re-score). What held up everywhere: the phase cuts, the DRIFT lifecycle, ga
 template discipline, this ledger's honesty.
 
 Six findings need operator design decisions before the fix loop:
-`verdicts/2026-07-17-operator-decisions-D1-D6.md` (plain-language packet). **Fix loop deferred by
+`verdicts/2026-07-17-standards-engagement/2026-07-17-operator-decisions-D1-D6.md` (plain-language packet). **Fix loop deferred by
 the operator to a fresh session** — resume by reading the two verdicts/ files; the resolution log
 in the verdict record is the work list; blind re-verification per `verification_core.md` §3
 follows the fixes; the operator's countersign closes.
@@ -245,7 +245,7 @@ Map updated (`SKILL.md` §1: verdicts/ added). Operator countersign of this reco
 The operator resolved all six panel design decisions in a fresh session (independent of the
 authoring sessions and the panel; it concurred with the session lead's yes-to-all-six and adjusted
 four). All six accepted in adjusted form — full resolutions with fix homes appended to
-`verdicts/2026-07-17-operator-decisions-D1-D6.md` (now the binding work order alongside the panel
+`verdicts/2026-07-17-standards-engagement/2026-07-17-operator-decisions-D1-D6.md` (now the binding work order alongside the panel
 record's resolution log). In one line each: **D1** review weight keyed to target doc (1 verifier
 for standards edits; panel for the self-governing surfaces; deferral becomes a named IOU; this
 panel pays the three old ones) · **D2** money machinery keyed to the reg/money dimension scoring 2,
@@ -266,7 +266,7 @@ Same session as the D1–D6 resolutions, operator-ordered ("go"), run lead as me
 
 **Round 1 (the panel's findings):** every major (~24), all 23 minors, and three judgment items
 (J-emphasis, J-defaults, J-neglect) fixed per the D1–D6 work order; per-finding evidence in the
-panel record's resolution log (`verdicts/2026-07-17-standards-panel.md`). J-M-anchor and
+panel record's resolution log (`verdicts/2026-07-17-standards-engagement/2026-07-17-standards-panel.md`). J-M-anchor and
 J-S-proportionality accepted (recorded there).
 
 **Blind re-verification, round 1** (four fresh verifiers, panel lens split, `verdicts/` excluded
@@ -297,7 +297,7 @@ countersign; this entry is truthful as of dispatch, and the round-2 outcome gets
 Round-2 blind confirmation returned FAIL on all four lenses — 1 blocker (the eval answer-key
 quarantine was incomplete: identifying facts survived in six binding files; found independently
 by three lenses), ~18 deduped majors, ~29 minors. The raw verifier reports are preserved verbatim
-(new rule, adopted and practiced this round): `verdicts/2026-07-17-reverify-r2-lens*.md`; the
+(new rule, adopted and practiced this round): `verdicts/2026-07-17-standards-engagement/2026-07-17-reverify-r2-lens*.md`; the
 findings→resolutions map is the panel record's round-2 section. Round-3 fixes are applied across
 the tree — the quarantine completed (grammar, four templates, emission, SKILL routing, echoes),
 evals now also exclude specai's own NOTES.md (this file carries fixture answer keys), the
@@ -321,7 +321,7 @@ returned verdicts pay this IOU and get their own entry.
 ## 2026-07-17 — Round 3 returned FAIL ×4; two ledger corrections; operator triage requested
 
 Round-3 blind confirmation: FAIL on all four lenses — 3 deduped blockers, ~21 deduped majors
-(raw reports verbatim at `verdicts/2026-07-17-reverify-r3-lens*.md`; findings map in the panel
+(raw reports verbatim at `verdicts/2026-07-17-standards-engagement/2026-07-17-reverify-r3-lens*.md`; findings map in the panel
 record's round-3 section).
 
 **Two corrections to this ledger's own prior entries (the verifiers caught both):**
@@ -353,7 +353,7 @@ the DoD line — exemplars §3 rule 4). Declined: gate-time operator commits of 
 time, and the countersign commit is the operator-fixing act; per-gate commits would be ceremony
 not lived by. All other round-3 findings (3 blockers, remaining majors, minors) are fixed —
 per-finding map in the panel record's triage section; raw round-3 reports at
-`verdicts/2026-07-17-reverify-r3-lens*.md`.
+`verdicts/2026-07-17-standards-engagement/2026-07-17-reverify-r3-lens*.md`.
 
 The **IOU above remains open** under the corrected payment rule (a gate closes by PASS or
 resolved FAIL — `change_rule.md` §5.4). Round-4 blind confirmation is dispatched as the closing
@@ -367,7 +367,7 @@ colliding with eval hygiene, found independently by two lenses), ~10 deduped maj
 named class: every hardening rode the main path and missed a sibling path (eval-internal seals,
 delta seals, spot-verify briefs). The trust-root class **held as accepted** — the judgment lens
 honored the recorded acceptance and confirmed ledger↔tree agreement. Raw reports:
-`verdicts/2026-07-17-reverify-r4-lens*.md`; the findings→resolutions map is the panel record's
+`verdicts/2026-07-17-standards-engagement/2026-07-17-reverify-r4-lens*.md`; the findings→resolutions map is the panel record's
 round-4 section.
 
 Round-5 fixes are applied (the eval carve-out; attestation travels in the brief; fenced verifier-
@@ -387,7 +387,7 @@ claims were partially false and are corrected here:** "the eval carve-out" had n
 SKILL §5's run-closing acts, and "the delta path joined every mitigation" missed step 2's gate
 copy and the check mapping. What verified clean: the refined quarantine letter (two lenses), the
 eval-exclusion invariant, all canonical terms, pinned values, ownership seams, DRIFT, the IOU
-letter, and the money trigger. Raw reports: `verdicts/2026-07-17-reverify-r5-lens*.md`;
+letter, and the money trigger. Raw reports: `verdicts/2026-07-17-standards-engagement/2026-07-17-reverify-r5-lens*.md`;
 resolutions in the panel record's round-5 section.
 
 Round-6 fixes are applied — the delta seal now runs the phase-6 machinery by named substitution,
@@ -404,7 +404,7 @@ the engagement. Five deduped majors, maximally convergent (the M-split buildabil
 round-6 edit's own defect — found by all four lenses independently). The judgment lens verified
 every prior NOTES claim true against the tree; the quarantine, eval path, IOU letter, and both
 ledger self-corrections all held under attack. Raw reports:
-`verdicts/2026-07-17-reverify-r6-lens*.md`.
+`verdicts/2026-07-17-standards-engagement/2026-07-17-reverify-r6-lens*.md`.
 
 All round-6 findings are fixed (the lens-totality rule chief among them: at every tier the union
 of dispatched briefs MUST equal the applicable lens set). Per the operator's standing
@@ -427,7 +427,8 @@ now emitted verbatim by the architecture template §7b), and **gate-copy tamper 
 open on absence** (check 1 diffed only what existed — absence now blocks like an unpaid IOU, and
 gate copies join the relocation set so the diff backstop durably sees them). Everything else
 held, including full ledger↔tree agreement on this engagement's closing claims. Full record:
-`verdicts/2026-07-17-postseal-audit.md`; raw reports `verdicts/2026-07-17-audit-lens*.md`.
+`verdicts/2026-07-17-postseal-audit/2026-07-17-postseal-audit.md`; raw reports
+`verdicts/2026-07-17-postseal-audit/2026-07-17-audit-lens*.md`.
 
 All findings fixed in this change set. **IOU (§5.4):** the fixes touch rule-1/rule-2 surfaces ·
 owed gate = focused pass + panel per §5, verdicts returned and closed · anchor = before the next
@@ -480,9 +481,27 @@ mode gains a permanent **seed verbatim-guard** (normalize whitespace/emphasis, s
 every pattern against its cited record — the 20-line check that just caught a real defect class).
 Operator countersign of the regenerated + completed seed = the commit.
 
+## 2026-07-19 — Records housekeeping: verdicts/ regrouped by engagement
+
+Operator-requested cleanup; zero-gate record bookkeeping (the SHA-correction precedent). The 27
+flat records under `verdicts/` moved into two engagement subdirectories —
+`2026-07-17-standards-engagement/` (the panel record, the D1–D6 packet, rounds 2–6 raw reports)
+and `2026-07-17-postseal-audit/` (the audit record + its four raw reports) — with
+`taxonomy-seed.md` and a new one-page index (`verdicts/README.md`) staying at the top level.
+Basenames unchanged; raw reports untouched (verbatim preservation holds); full-path citations
+re-pointed in this ledger, the panel record, and the D1–D6 packet; bare-filename citations (the
+taxonomy seed's source-record column, the compiled records' raw-report references) resolve
+unchanged. `SKILL.md`'s map and `README.md`'s layout describe `verdicts/` at directory level and
+remain true — no gated file touched. Also fixed: this heading below claimed "Currently empty."
+beside a non-empty list (stale since the SHA-correction entry landed). Operator countersign =
+the commit.
+
 ## Exempted edits
 - 2026-07-17 · NOTES.md + 5 verdicts/ records · orphaned seal SHA corrected (record fix, ungated
   by nature; logged here for the one-reader guarantee).
+- 2026-07-19 · verdicts/ (27 records → two engagement subdirs + index README) · NOTES.md + panel
+  record + D1–D6 packet full-path citations re-pointed (record bookkeeping, ungated by nature).
+- 2026-07-19 · NOTES.md · stale "Currently empty." dropped from this heading's parenthetical.
 
 *(standing heading per `change_rule.md` §5 rule 3 — one line per typo/clarity-exempted edit;
-enumerated at every seal/eval preamble. Currently empty.)*
+enumerated at every seal/eval preamble.)*

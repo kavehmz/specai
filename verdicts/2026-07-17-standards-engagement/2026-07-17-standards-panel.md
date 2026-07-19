@@ -12,7 +12,7 @@ to each other: (1) consistency/contract · (2) executability/buildability · (3)
 **Per-lens verdicts:** FAIL · FAIL · FAIL · FAIL — zero blockers anywhere; majors below.
 **Panel verdict: FAIL** (the repo's own bar: zero open majors). **Fix loop: PENDING** — deferred
 by the operator to a fresh session, together with the six operator decisions in
-`verdicts/2026-07-17-operator-decisions-D1-D6.md`.
+`verdicts/2026-07-17-standards-engagement/2026-07-17-operator-decisions-D1-D6.md`.
 
 Convergence note: findings marked ×2/×3/×4 were found independently by that many lenses.
 
@@ -177,7 +177,7 @@ discipline; templates' blockquote hygiene; NOTES' honesty.
 ## Resolution log (fix-loop session, 2026-07-17)
 
 Design-flagged findings resolved per the operator's D1–D6 decisions
-(`verdicts/2026-07-17-operator-decisions-D1-D6.md`, Operator resolutions section). Evidence =
+(`verdicts/2026-07-17-standards-engagement/2026-07-17-operator-decisions-D1-D6.md`, Operator resolutions section). Evidence =
 where the fix landed.
 
 ### Majors — all fixed
