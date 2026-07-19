@@ -68,8 +68,13 @@ the operator, explicitly, as a vision edit — `change_rule.md` §2).
    addition (the component's own existing spec) and one substitution (its delta slice replaces
    its original phase-2 slice). Unchanged components are not opened.
 5. **Emission delta.** Reconcile the operating manual: boot-table rows, cascade graph, README map,
-   command grammar if surfaces changed. Reconcile `DRIFT.md` when present (re-point owning-§
-   citations the delta moved; delete items it resolved or made moot). Append the engagement to the
+   command grammar if surfaces changed. **If the dial re-tiered, instantiate the process standards
+   and verification cadence the new tier requires** (`phases/emission.md` output 2, `grammar.md`
+   §5) — a re-tier never leaves the repo running the old tier's process. Reconcile `DRIFT.md` when
+   present (re-point owning-§ citations the delta moved; delete items it resolved or made moot),
+   and in every case record the delta's own spec-ahead-of-code divergence per `grammar.md` §4.10
+   rule 6 — one dated entry naming the engagement, code reconciliation deferred to the repo's
+   `develop` (case B); create the file if absent. Append the engagement to the
    repo's `NOTES.md` (what changed, why, decisions, any reversed cuts with the operator's say-so,
    **and the phases re-run** — fenced check 2's source).
 6. **Delta verification & seal — a phase-6 seal in every duty** (`phases/verification.md`'s
@@ -94,7 +99,8 @@ the operator, explicitly, as a vision edit — `change_rule.md` §2).
 
 ## Outputs
 
-The updated sealed repo (specs + manual + NOTES + a reconciled `DRIFT.md` when present), the delta
+The updated sealed repo (specs + manual + NOTES + `DRIFT.md` carrying the delta's
+spec-ahead-of-code entry — reconciled when it existed, created when it did not), the delta
 inventory and verdicts in
 `<run-dir>/`, and version-bumped contracts with migration notes. Code is untouched — the emitted
 repo's own `develop` (case B: spec changed, spec wins) reconciles implementations afterward.

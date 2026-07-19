@@ -12,8 +12,15 @@ applied to the factory itself.)
 - **Queued for that panel batch (operator-decided, NOT landed):** S2 — operator-accepted majors
   fold into NOTES open topics with reason/date/revisit anchor · S3-brake — no new normative
   sentence lands without naming the finding it answers · S8 — definition checkpoint gains an
-  honest-floor option below ~dial 2 (one-verifier gate). Batching question (one landing = one
+  honest-floor option below ~dial 2 (one-verifier gate) · **trust-model sentence** — one line in
+  `verification_core.md` §1 stating the operator is the root of trust and FAIL loops end by
+  recorded operator decision (from the 2026-07-19 external review; self-governing surface, so it
+  rides this panel, not a solo landing). Batching question (one landing = one
   panel) is put to that panel's brief.
+- **Landed 2026-07-19, gate owed (rides the same batch):** two `phases/delta.md` fixes from a
+  second external review — step 5 now instantiates the new tier's process standards on a re-tier,
+  and records the delta's spec-ahead-of-code divergence in `DRIFT.md` per §4.10 rule 6. Owed
+  gate: the §5-rule-3 focused pass.
 - **Adopted execution order:** IOU payment → tier-S delta drill on the emitted feedler repo →
   speclint.py (emitted + factory modes, with the seed verbatim-guard; recover the L1 run's seed
   script if present).
